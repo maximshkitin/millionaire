@@ -29,7 +29,7 @@ export const Quiz: React.FC = () => {
     const fetchDataAndSetLevels = async () => {
       const mockData = await fetchMockData();
       mockData && setLevels(mockData);
-    };
+    }
 
     fetchDataAndSetLevels();
   }, []);

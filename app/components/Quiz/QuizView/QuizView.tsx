@@ -22,7 +22,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
   scoreList,
   currentScore,
   handleSubmitAnswer,
-  children,
+  children
 }) => (
   <div className={className}>
     {children}
