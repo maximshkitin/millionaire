@@ -36,7 +36,7 @@ export const Quiz: React.FC = () => {
 
   const { currentLevel, currentScore, isOngoing } = useSelector(
     (state: RootState) => state.quiz,
-  );
+  )
 
   const currentQuestion: Question = levels?.[currentLevel]?.question ?? initialQuestionState;
 
