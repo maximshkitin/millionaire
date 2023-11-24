@@ -1,2 +1,2 @@
-export * from './QuizOptions'
-export * from './QuizOptionsMultiselect'
+export * from './QuizOptions';
+export * from './QuizOptionsMultiselect';

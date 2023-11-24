@@ -1,9 +1,9 @@
-import { Quiz } from './components/Quiz'
+import { Quiz } from './components/Quiz';
 
 export default function IndexPage() {
-  return <Quiz />
+  return <Quiz />;
 }
 
 export const metadata = {
   title: 'Redux Toolkit',
-}
+};

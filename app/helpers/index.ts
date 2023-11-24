@@ -1,3 +1,2 @@
-export * from './checkAnswer'
-export * from './getNextScore'
-export * from './fetchMockData'
+export * from './checkAnswer';
+export * from './fetchMockData';

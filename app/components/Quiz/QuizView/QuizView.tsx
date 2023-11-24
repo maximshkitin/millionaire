@@ -1,8 +1,9 @@
-'use client'
-import React from 'react'
-import { AnswerOption } from '@/app/config/types'
-import { QuizScore } from './QuizScore'
-import { QuizOptions, QuizOptionsMultiselect } from './QuizOptions'
+'use client';
+
+import React from 'react';
+import { AnswerOption } from '@/app/config/types';
+import { QuizScore } from './QuizScore';
+import { QuizOptions, QuizOptionsMultiselect } from './QuizOptions';
 
 interface QuizViewProps {
   className: string
@@ -37,4 +38,4 @@ export const QuizView: React.FC<QuizViewProps> = ({
       <QuizScore scoreList={scoreList} currentScore={currentScore} />
     </div>
   </div>
-)
+);

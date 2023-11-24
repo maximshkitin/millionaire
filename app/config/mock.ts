@@ -1,4 +1,4 @@
-import { Level } from './types'
+import { Level } from './types';
 
 const levels: Level[] = [
   {
@@ -83,6 +83,6 @@ const levels: Level[] = [
       correctAnswer: ['67890'],
     },
   },
-]
+];
 
-export default levels
+export default levels;

@@ -1,10 +1,10 @@
 /* Components */
-import { Providers } from '@/lib/providers'
+import { Providers } from '@/lib/providers';
 // import { Nav } from './components/Nav'
 
 /* Instruments */
-import styles from './styles/layout.module.css'
-import './styles/globals.css'
+import styles from './styles/layout.module.css';
+import './styles/globals.css';
 
 export default function RootLayout(props: React.PropsWithChildren) {
   return (
@@ -44,7 +44,8 @@ export default function RootLayout(props: React.PropsWithChildren) {
               >
                 Redux Toolkit
               </a>
-              ,<span> and </span>
+              ,
+              <span> and </span>
               <a
                 className={styles.link}
                 href="https://react-redux.js.org/"
@@ -58,5 +59,5 @@ export default function RootLayout(props: React.PropsWithChildren) {
         </body>
       </html>
     </Providers>
-  )
+  );
 }

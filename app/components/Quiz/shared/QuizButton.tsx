@@ -1,14 +1,21 @@
-import React from 'react'
+import React, { ReactNode, MouseEvent } from 'react';
 
-export const QuizButton = ({
+interface QuizButtonProps {
+  handleClick: (event: MouseEvent<HTMLButtonElement>) => void;
+  className?: string;
+  children: ReactNode;
+}
+
+export function QuizButton({
   handleClick,
   className = '',
   children,
-  ...restProps
-}: any) => (
-  <div className="button-wrapper">
-    <button className={className} onClick={handleClick} {...restProps}>
-      {children}
-    </button>
-  </div>
-)
+}: QuizButtonProps) {
+  return (
+    <div className="button-wrapper">
+      <button className={className} onClick={handleClick}>
+        {children}
+      </button>
+    </div>
+  );
+}

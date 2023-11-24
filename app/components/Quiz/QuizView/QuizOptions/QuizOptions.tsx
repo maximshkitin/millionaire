@@ -1,6 +1,7 @@
-'use client'
-import React from 'react'
-import { AnswerOption } from '@/app/config/types'
+'use client';
+
+import React from 'react';
+import { AnswerOption } from '@/app/config/types';
 
 interface QuizOptionsProps {
   options: AnswerOption[]
@@ -20,4 +21,4 @@ export const QuizOptions: React.FC<QuizOptionsProps> = ({
       </div>
     ))}
   </>
-)
+);

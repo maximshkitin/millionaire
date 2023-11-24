@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { ReactNode } from 'react';
 
-export const QuizTextBox = ({ className, children }: any) => (
-  <>
-    <div className={className}>{children}</div>
-  </>
-)
+interface QuizTextPropsProps {
+  className?: string;
+  children: ReactNode;
+}
+
+export function QuizTextBox({ className, children }: QuizTextPropsProps) {
+  return <div className={className}>{children}</div>;
+}

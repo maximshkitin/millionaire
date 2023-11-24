@@ -1,2 +1,2 @@
-export * from '../shared/QuizIcon'
-export * from './QuizStaticView'
+export * from '../shared/QuizIcon';
+export * from './QuizStaticView';

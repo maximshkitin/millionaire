@@ -1,4 +1,4 @@
-import { Question } from './types'
+import { Question } from './types';
 
 export const initialQuestionState: Question = {
   id: '',
@@ -6,4 +6,4 @@ export const initialQuestionState: Question = {
   value: '',
   options: [],
   correctAnswer: [],
-}
+};

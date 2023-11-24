@@ -1,5 +1,5 @@
-import React, { ReactNode, MouseEvent } from 'react'
-import { QuizButton, QuizIcon } from '../shared'
+import React, { ReactNode, MouseEvent } from 'react';
+import { QuizButton, QuizIcon } from '../shared';
 
 interface QuizStaticViewProps {
   className: string
@@ -21,4 +21,4 @@ export const QuizStaticView: React.FC<QuizStaticViewProps> = ({
 
     <QuizButton handleClick={handleClick}>{buttonText}</QuizButton>
   </div>
-)
+);

@@ -1,3 +1,10 @@
-import React from 'react'
+import React from 'react';
 
-export const QuizScore = ({ scoreList, currentScore }: any) => <div></div>
+interface QuizScoreProps {
+  scoreList?: number[];
+  currentScore?: number;
+}
+
+export function QuizScore({ scoreList, currentScore }: QuizScoreProps) {
+  return <div>d{ scoreList?.join(' ') }, { currentScore } </div>;
+}
