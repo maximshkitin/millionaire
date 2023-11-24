@@ -1,8 +1,7 @@
-/* Components */
-import { Counter } from './components/Counter/Counter'
+import { Quiz } from './components/Quiz'
 
 export default function IndexPage() {
-  return <Counter />
+  return <Quiz />
 }
 
 export const metadata = {

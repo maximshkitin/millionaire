@@ -1,6 +1,6 @@
 /* Components */
 import { Providers } from '@/lib/providers'
-import { Nav } from './components/Nav'
+// import { Nav } from './components/Nav'
 
 /* Instruments */
 import styles from './styles/layout.module.css'
@@ -12,11 +12,7 @@ export default function RootLayout(props: React.PropsWithChildren) {
       <html lang="en">
         <body>
           <section className={styles.container}>
-            <Nav />
-
-            <header className={styles.header}>
-              <img src="/logo.svg" className={styles.logo} alt="logo" />
-            </header>
+            {/* <Nav /> */}
 
             <main className={styles.main}>{props.children}</main>
 
