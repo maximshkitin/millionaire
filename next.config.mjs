@@ -2,8 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   output: 'export',
-  basePath: '/millionaire',
-  assetPrefix: '/millionaire/',
+  basePath: process.env.GITHUB_PAGES ? '/millionaire' : '',
+  assetPrefix: process.env.GITHUB_PAGES ? '/millionaire/' : '',
 }
 
 export default nextConfig
