@@ -1,5 +1,6 @@
 import React, { ReactNode, MouseEvent } from 'react';
 import { QuizButton, QuizIcon } from '../shared';
+import styles from '@/app/styles/Quiz/QuizView/shared/QuizButton.module.scss';
 
 interface QuizStaticViewProps {
   className: string
@@ -19,6 +20,6 @@ export const QuizStaticView: React.FC<QuizStaticViewProps> = ({
 
     {children}
 
-    <QuizButton handleClick={handleClick}>{buttonText}</QuizButton>
+    <QuizButton className={styles.QuizButton} handleClick={handleClick}>{buttonText}</QuizButton>
   </div>
 );
