@@ -37,6 +37,22 @@ const levels: Level[] = [
     level: 3,
     score: 2000,
     question: {
+      id: '56789',
+      type: 'multiselect',
+      value: 'Which of the following is a primary color?',
+      options: [
+        { id: '54321', value: 'Green' },
+        { id: '67890', value: 'Blue' },
+        { id: '98765', value: 'Yellow' },
+        { id: '43210', value: 'Purple' },
+      ],
+      correctAnswer: ['67890', '54321'],
+    },
+  },
+  {
+    level: 4,
+    score: 4000,
+    question: {
       id: '34567',
       type: 'singular',
       value:
@@ -51,8 +67,8 @@ const levels: Level[] = [
     },
   },
   {
-    level: 4,
-    score: 4000,
+    level: 5,
+    score: 8000,
     question: {
       id: '45678',
       type: 'singular',
@@ -65,22 +81,6 @@ const levels: Level[] = [
         { id: '43210', value: 'Stephen Hawking' },
       ],
       correctAnswer: ['98765'],
-    },
-  },
-  {
-    level: 5,
-    score: 8000,
-    question: {
-      id: '56789',
-      type: 'multiselect',
-      value: 'Which of the following is a primary color?',
-      options: [
-        { id: '54321', value: 'Green' },
-        { id: '67890', value: 'Blue' },
-        { id: '98765', value: 'Yellow' },
-        { id: '43210', value: 'Purple' },
-      ],
-      correctAnswer: ['67890', '54321'],
     },
   },
 ];

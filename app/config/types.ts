@@ -1,3 +1,8 @@
+export const QuestionTypeValue = {
+  default: 'singular',
+  multiselect: 'multiselect'
+} as const
+
 export interface QuizState {
   currentLevel: number
   currentScore: number
@@ -15,9 +20,11 @@ export interface AnswerOption {
   value: string
 }
 
+export type QuestionType = typeof QuestionTypeValue[keyof typeof QuestionTypeValue];
+
 export interface Question {
   id: string
-  type: string
+  type: QuestionType
   value: string
   options: AnswerOption[]
   correctAnswer: string[] // IDs: figure out whether it's safe to keep it here

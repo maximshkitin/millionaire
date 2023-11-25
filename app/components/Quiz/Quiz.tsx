@@ -38,7 +38,8 @@ export const Quiz: React.FC = () => {
     (state: RootState) => state.quiz,
   )
 
-  const currentQuestion: Question = levels?.[currentLevel]?.question ?? initialQuestionState;
+  // '- 1' is needed because level count statrs from '1' 
+  const currentQuestion: Question = levels?.[currentLevel - 1]?.question ?? initialQuestionState;
 
   const {
     options,
@@ -66,7 +67,7 @@ export const Quiz: React.FC = () => {
 
     if (checkIfCorrect(answer, correctAnswer)) {
 
-      // avoiding '+ 1' because levels start counting from '1' while arrays do from '0'
+      // avoiding '+ 1' because level count statrs from '1' while arrays do from '0'
       if (levels[currentLevel].score) { // next score value.
         dispatch(incrementLevel());
         dispatch(updateScore(levels[currentLevel - 1].score)); // current score value.

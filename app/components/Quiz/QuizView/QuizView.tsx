@@ -1,13 +1,13 @@
 'use client';
 
 import React from 'react';
-import { AnswerOption } from '@/app/config/types';
+import { AnswerOption, QuestionType, QuestionTypeValue } from '@/app/config/types';
 import { QuizScore } from './QuizScore';
 import { QuizOptions, QuizOptionsMultiselect } from './QuizOptions';
 
 interface QuizViewProps {
   className: string
-  type: string
+  type: QuestionType
   answerOptions: AnswerOption[]
   scoreList: number[]
   currentScore: number
@@ -26,7 +26,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
 }) => (
   <div className={className}>
     {children}
-    {type === 'multiselect' ? (
+    {type === QuestionTypeValue.multiselect ? (
       <QuizOptionsMultiselect
         options={answerOptions}
         handleSubmitAnswer={handleSubmitAnswer}
