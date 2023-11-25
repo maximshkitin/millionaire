@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 .container {
   display: grid;
   grid-template-areas:
@@ -20,7 +22,23 @@
 }
 
 .main {
+  position: relative;
   grid-area: main;
+  width: 100vw;
+  height: 100vh;
+  background-color: $White;
+}
+
+.main:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 100vh 100vw;
+  border-color: transparent transparent $Orange-5 transparent;
 }
 
 .header,
