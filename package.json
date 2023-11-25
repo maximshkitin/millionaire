@@ -14,7 +14,7 @@
     "deploy": "npm run build:gh && touch ./out/.nojekyll && gh-pages -d out -t true",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "prepare": "husky install",
+    "prepare": "husky install && chmod +x .husky/*",
     "prepush": "npm run lint"
   },
   "dependencies": {
