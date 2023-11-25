@@ -13,8 +13,9 @@ export const checkAnswer = (
     return false;
   }
 
-  const sortedAnswerIds = answerIds.sort();
-  const sortedCorrectAnswer = correctAnswer.sort();
+  // slice method is needed to prevent the original array from mutating
+  const sortedAnswerIds = answerIds.slice().sort();
+  const sortedCorrectAnswer = correctAnswer.slice().sort();
 
   return sortedAnswerIds.every(
     (value, index) => value === sortedCorrectAnswer[index],
