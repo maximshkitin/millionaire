@@ -7,6 +7,3 @@ export const initialQuestionState: Question = {
   options: [],
   correctAnswer: [],
 };
-
-// consists of ['A', 'B', 'C', ..., 'Z'] -> char code 65 = 'A'
-export const ALPHABET = Array.from({ length: 26 }, (_, i) => String.fromCharCode(65 + i));
