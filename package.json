@@ -7,13 +7,15 @@
   },
   "scripts": {
     "dev": "next",
+    "test": "react-scripts test",
     "build": "next build",
     "build:gh": "cross-env GITHUB_PAGES=true next build",
     "start": "next start",
     "deploy": "npm run build:gh && touch ./out/.nojekyll && gh-pages -d out -t true",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "prepush": "npm run lint"
   },
   "dependencies": {
     "@reduxjs/toolkit": "1.9.5",
@@ -35,7 +37,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run prepush"
     }
   },
   "lint-staged": {
