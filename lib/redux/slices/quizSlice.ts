@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { QuizState, UserAnswer } from '@/app/config/types';
 
 const initialState: QuizState = {
-  currentLevel: 4,
+  currentLevel: 1,
   currentScore: 0,
   answerLogs: [],
   isOngoing: null,
