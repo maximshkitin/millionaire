@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { AnswerOption } from '@/app/config/types';
+import { ALPHABET } from '@/app/config/consts';
 
 interface QuizOptionsProps {
   options: AnswerOption[]
@@ -13,10 +14,13 @@ export const QuizOptions: React.FC<QuizOptionsProps> = ({
   handleClick,
 }) => (
   <>
-    {options.map((option) => (
+    {options.map((option, index) => (
       <div key={option.id}>
         <div id={option.id} onClick={() => handleClick([option])}>
-          {option.value}
+          <span className='QuizOptionChar'>
+            { ALPHABET[index] }
+          </span>
+          { option.value }
         </div>
       </div>
     ))}

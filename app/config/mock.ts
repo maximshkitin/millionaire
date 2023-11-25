@@ -6,7 +6,7 @@ const levels: Level[] = [
     score: 500,
     question: {
       id: '12345',
-      type: 'checkbox',
+      type: 'singular',
       value: 'What is the largest mammal on Earth?',
       options: [
         { id: '54321', value: 'Elephant' },
@@ -22,7 +22,7 @@ const levels: Level[] = [
     score: 1000,
     question: {
       id: '23456',
-      type: 'radio',
+      type: 'singular',
       value: 'Which planet is known as the Red Planet?',
       options: [
         { id: '54321', value: 'Venus' },
@@ -38,7 +38,7 @@ const levels: Level[] = [
     score: 2000,
     question: {
       id: '34567',
-      type: 'checkbox',
+      type: 'singular',
       value:
         'Which of the following programming languages is not statically typed?',
       options: [
@@ -55,7 +55,7 @@ const levels: Level[] = [
     score: 4000,
     question: {
       id: '45678',
-      type: 'radio',
+      type: 'singular',
       value:
         'Which famous scientist developed the theory of general relativity?',
       options: [
@@ -72,7 +72,7 @@ const levels: Level[] = [
     score: 8000,
     question: {
       id: '56789',
-      type: 'checkbox',
+      type: 'multiselect',
       value: 'Which of the following is a primary color?',
       options: [
         { id: '54321', value: 'Green' },
@@ -80,7 +80,7 @@ const levels: Level[] = [
         { id: '98765', value: 'Yellow' },
         { id: '43210', value: 'Purple' },
       ],
-      correctAnswer: ['67890'],
+      correctAnswer: ['67890', '54321'],
     },
   },
 ];
