@@ -1,0 +1,12 @@
+@import './variables.scss';
+
+.Quiz {
+    width: 100%;
+}
+
+.QuizWrapper {
+    width: 100%;
+    background-color: $Black-5;
+    min-height: 100vh;
+    display: flex;
+}

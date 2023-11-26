@@ -5,5 +5,5 @@ export default function IndexPage() {
 }
 
 export const metadata = {
-  title: 'Redux Toolkit',
+  title: 'Millionaire App',
 };

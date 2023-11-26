@@ -1,0 +1,78 @@
+.QuizOptionTriangle {
+    &Wrapper {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+
+        &.reversed {
+            left: initial;
+            right: 0;
+        }
+    }
+}
+
+.QuizOptionTriangle.reverse {
+    transform: rotate(180deg);
+    left: unset;
+    right: -13px;
+}
+
+.QuizOptionTriangle {
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-style: solid;
+    top: 11px;
+    left: -13px;
+    border-style: solid;
+    border-width: 15px 12px 15px 0;
+    border-color: transparent #FFF transparent transparent;
+    transform: rotate(0deg);
+
+    &Border {
+        position: absolute;
+        display: block;
+        height: 1px;
+        width: 30px;
+        background-color: #D0D0D8;
+        transform: rotate(-50deg);
+        left: -20px;
+
+        &Top {
+            height: 1px;
+            top: 14px;
+        }
+
+        &Bottom {
+            transform: rotate(50deg);
+            bottom: 14px;
+        }
+
+    }
+}
+
+.reversed {
+    & .QuizOptionTriangle {
+        transform: rotate(180deg);
+        left: unset;
+        right: -13px;
+
+        &Border {
+            &Top {
+                bottom: 14px;
+                right: -20px;
+                left: unset;
+                top: unset;
+            }
+    
+            &Bottom {
+                top: 14px;
+                right: -20px;
+                left: unset;
+                bottom: unset;
+                transform: rotate(50deg);
+            }
+        }
+    }
+}

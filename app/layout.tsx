@@ -3,7 +3,7 @@ import { Providers } from '@/lib/providers';
 // import { Nav } from './components/Nav'
 
 /* Instruments */
-import styles from './styles/layout.module.scss';
+import './styles/layout.scss';
 import './styles/globals.scss';
 
 export default function RootLayout(props: React.PropsWithChildren) {
@@ -11,10 +11,10 @@ export default function RootLayout(props: React.PropsWithChildren) {
     <Providers>
       <html lang="en">
         <body>
-          <section className={styles.container}>
+          <section className="container">
             {/* <Nav /> */}
 
-            <main className={styles.main}>{props.children}</main>
+            <main className="main">{props.children}</main>
 
           </section>
         </body>

@@ -5,7 +5,7 @@ import { Level } from '../config/types';
 const fetchDataAsync = (): Promise<Level[]> => new Promise((resolve) => {
   setTimeout(() => {
     resolve(mockData);
-  }, 4000);
+  }, 400);
 });
 
 export const fetchMockData = async (): Promise<Level[]> => {

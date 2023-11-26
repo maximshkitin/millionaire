@@ -20,6 +20,8 @@ import { QuizView } from './QuizView';
 import { QuizStaticView } from './QuizStaticView';
 import { QuizTextBox } from './shared';
 
+import '@/app/styles/Quiz.scss';
+
 export const Quiz: React.FC = () => {
   const dispatch = useDispatch();
 
@@ -83,11 +85,11 @@ export const Quiz: React.FC = () => {
   };
 
   return (
-    <div className="content-wrapper">
+    <div className="Quiz">
       {isOngoing === null && ( // intro screen
         <QuizStaticView
-          className="kek"
-          buttonText="Start!"
+          className="QuizStartScreen"
+          buttonText="Start"
           handleClick={handleStart}
         >
           <QuizTextBox className="QuizTitle">Who wants to be?</QuizTextBox>
@@ -96,10 +98,10 @@ export const Quiz: React.FC = () => {
 
       {isOngoing && ( // quiz screen
         <QuizView
-          className="QuizView"
+          className="QuizWrapper"
           type={questionType}
           answerOptions={options}
-          currentScore={currentScore}
+          currentLevelIndex={currentLevel - 1}
           scoreList={levels?.map((level) => level.score)}
           handleSubmitAnswer={handleSubmitAnswer}
         >
@@ -110,7 +112,7 @@ export const Quiz: React.FC = () => {
       {isOngoing !== null
         && !isOngoing && ( // final screen
           <QuizStaticView
-            className="kek"
+            className="QuizFinalScreen"
             buttonText="Try Again"
             handleClick={handleReset}
           >
