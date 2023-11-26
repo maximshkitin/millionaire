@@ -120,9 +120,9 @@ export const Quiz: React.FC = () => {
           >
             <QuizTextBox className="QuizSubtitle">Total score:</QuizTextBox>
             <QuizTextBox className="QuizTitle">
-              {currentScore}
+              ${currentScore?.toLocaleString()}
               {' '}
-              earned.
+              earned
             </QuizTextBox>
           </QuizStaticView>
       )}

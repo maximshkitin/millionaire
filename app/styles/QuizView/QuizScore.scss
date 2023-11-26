@@ -10,6 +10,7 @@
 }
 
 .QuizScore {
+    position: relative;
     width: 100%;
     text-align: center;
 
@@ -29,21 +30,25 @@
     }
 
     .QuizInfoOption {
+        position: static;
         display: inline-block;
         width: 64%;
-        margin: 8px;
+        margin: 8px 0;
         padding: 8px;
 
         &::before,
         &::after {
-            width: 64px;
+            width: calc(18% - 12px);
+            top: unset;
         }
 
         &::before {
-            left: -71px;
+            left: 0;
+            transform: translateY(11px);
         }
         &::after {
-            right: -71px;
+            right: 0;
+            transform: translateY(-12px);
         }
 
         &.QuizScoreItemActive {
@@ -61,35 +66,52 @@
     }
 
     .QuizOptionTriangle {
-        display: none;
+        border-width: 17px 21px 17px 0;
+        top: 0;
+        left: -12px;
+
+        &Wrapper {
+           top: -6px;
+            bottom: 0;
+            left: -10px; 
+        }
+        
 
         &Border {
-            width: 22px;
-            left: -12px;
+            transform: rotate(-42deg);
+            width: 24px;
+            left: -15px;
 
             &Top {
-                top: 10px;
+                top: 9px;
             }
     
             &Bottom {
-                bottom: 10px;
+                bottom: unset;
+                top: 25px;
+                left: -15px;
+                transform: rotate(-138deg);
             }
         }
     }
     .QuizOptionTriangleWrapper.reversed .QuizOptionTriangle {
+        right: -22px;
+        top: -22px;
         &Border {
+            transform: rotate(42deg);
             &Top {
-                bottom: 10px;
-                right: -12px;
+                bottom: 13px;
+                right: -25px;
                 left: unset;
                 top: unset;
             }
     
             &Bottom {
-                top: 10px;
-                right: -12px;
+                top: 2px;
+                right: -25px;
                 left: unset;
                 bottom: unset;
+                transform: rotate(138deg);
             }
         }
     }
