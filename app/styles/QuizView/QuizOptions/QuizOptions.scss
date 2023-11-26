@@ -17,6 +17,7 @@ $Option-height: 54px;
     &Option {
         width: calc(50% - 34px);
         margin-top: 30px;
+        cursor: pointer;
 
         &Prefix {
             color: $Orange-100;
@@ -34,6 +35,69 @@ $Option-height: 54px;
             border-color: $Black-40 transparent $Black-40 transparent;
             font-weight: 400;
             position: relative;
+
+            &:hover {
+                border-color: $Orange-100 transparent $Orange-100 transparent;
+
+                & .QuizOptionTriangleBorder,
+                &::before,
+                &::after {
+                    background-color: $Orange-100;
+                }
+            }
+        }
+        &.correct {
+            pointer-events: none;
+            .QuizInfoOption {
+                background-color: $Green-40;
+                border-color: $Green-100 transparent $Green-100 transparent;
+
+                & .QuizOptionTriangleBorder,
+                &::before,
+                &::after {
+                    background-color: $Green-100;
+                }
+
+                & .QuizOptionTriangle {
+                    border-right-color: $Green-40;
+                }
+            }
+        }
+
+        &.incorrect {
+            pointer-events: none;
+            .QuizInfoOption {
+                background-color: $Red-5;
+                border-color: $Red-100 transparent $Red-100 transparent;
+
+                & .QuizOptionTriangleBorder,
+                &::before,
+                &::after {
+                    background-color: $Red-100;
+                }
+
+                & .QuizOptionTriangle {
+                    border-right-color: $Red-5;
+                }
+            }
+        }
+
+        &.selected {
+            pointer-events: none;
+            .QuizInfoOption {
+                background-color: $Orange-10;
+                border-color: $Orange-100 transparent $Orange-100 transparent;
+
+                & .QuizOptionTriangleBorder,
+                &::before,
+                &::after {
+                    background-color: $Orange-100;
+                }
+
+                & .QuizOptionTriangle {
+                    border-right-color: $Orange-10;
+                }
+            }
         }
     }
 }
