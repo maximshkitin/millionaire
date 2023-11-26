@@ -1,6 +1,7 @@
 import React from 'react';
 
 import '@/app/styles/QuizView/QuizScore.scss';
+import { QuizInfoOption } from '../shared';
 
 interface QuizScoreProps {
   scoreList?: number[];
@@ -26,9 +27,11 @@ export function QuizScore({ scoreList, currentLevelIndex }: QuizScoreProps) {
     <div className="QuizScoreWrapper">
         <div className="QuizScore">
            { scoreList?.slice().reverse().map(score => (
-              <div key={score} className={getScoreItemClassName(score, scoreList[currentLevelIndex])}>${score}</div>
+              <QuizInfoOption key={score} className={getScoreItemClassName(score, scoreList[currentLevelIndex])}>
+                 <span>{score}</span>
+              </QuizInfoOption>
             )
-          ) }
+          )}
         </div>
     </div>
   );

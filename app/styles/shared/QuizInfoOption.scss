@@ -1,18 +1,5 @@
 @import '../variables.scss';
 
-.QuizOption {
-    .QuizInfoOption {
-        background-color: #fff;
-        width: 100%;
-        padding: 24px 15px;
-        border-radius: 15px;
-        border: 1px solid $Black-40;
-        border-color: $Black-40 transparent $Black-40 transparent;
-        font-weight: 400;
-        position: relative;
-    }
-}
-
 .QuizInfoOption {
     background-color: #fff;
     border-radius: 15px;

@@ -52,7 +52,7 @@
     }
 }
 
-.reversed {
+.QuizOptionTriangleWrapper.reversed {
     & .QuizOptionTriangle {
         transform: rotate(180deg);
         left: unset;

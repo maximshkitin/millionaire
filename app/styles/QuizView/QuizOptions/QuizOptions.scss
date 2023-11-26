@@ -5,6 +5,7 @@ $Option-height: 54px;
 .Quiz {
     
     &Options {
+        padding: 35px;
         display: flex;
         flex-direction: initial;
         flex-wrap: wrap;
@@ -14,7 +15,7 @@ $Option-height: 54px;
     }
 
     &Option {
-        width: calc(50% - 30px);
+        width: calc(50% - 34px);
         margin-top: 30px;
 
         &Prefix {
@@ -22,6 +23,17 @@ $Option-height: 54px;
             margin-right: 5px;
             position: relative;
             z-index: 2;
+        }
+
+        .QuizInfoOption {
+            background-color: #fff;
+            width: 100%;
+            padding: 24px 15px;
+            border-radius: 15px;
+            border: 1px solid $Black-40;
+            border-color: $Black-40 transparent $Black-40 transparent;
+            font-weight: 400;
+            position: relative;
         }
     }
 }
