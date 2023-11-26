@@ -1,7 +1,8 @@
 'use client';
 
 import React from 'react';
-import { QuizOptionTriangle } from './QuizOptionTriangle';
+
+import { QuizInfoOption } from '../../shared';
 
 import { AnswerOption } from '@/app/config/types';
 import { generateAlphabet } from '@/app/helpers/generateAlphabet';
@@ -21,11 +22,10 @@ export const QuizOptions: React.FC<QuizOptionsProps> = ({
     <div className="QuizOptions">
       {options.map((option, index) => (
           <div id={option.id} className="QuizOption" onClick={() => handleClick([option])}>
-
-            <QuizOptionTriangle />
-            <span className="QuizOptionPrefix">{ generateAlphabet()[index] }</span>
+            <QuizInfoOption>
+              <span className="QuizOptionPrefix">{ generateAlphabet()[index] }</span>
               { option.value }
-            <QuizOptionTriangle isReversed />
+            </QuizInfoOption>
             
           </div>
       ))}

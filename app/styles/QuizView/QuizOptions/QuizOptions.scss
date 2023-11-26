@@ -1,7 +1,6 @@
 @import '../../variables.scss';
 
 $Option-height: 54px;
-$Rhombus-size: 32px;
 
 .Quiz {
     
@@ -11,61 +10,13 @@ $Rhombus-size: 32px;
         flex-wrap: wrap;
         align-items: baseline;
         justify-content: space-between;
+        width: 100%;
     }
 
     &Option {
-        background-color: #fff;
-        padding: 15px;
-        margin: 15px;
-        width: calc(50% - 44px);
-        border-radius: 15px;
-        height: $Option-height;
-        border: 1px solid $Black-40;
-        border-color: $Black-40 transparent $Black-40 transparent;
-        font-weight: 400;
-        font-size: 14px;
-        position: relative;
+        width: calc(50% - 30px);
+        margin-top: 30px;
 
-        &::before,
-        &::after {
-            content: '';
-            display: block;
-            position: absolute;
-            height: 1px;
-            left: -30px;
-            width: 16px;
-            top: 49%;
-            background-color: $Black-40;
-        }
-
-        &::after {
-            left: initial;
-            right: -30px;
-        }
-        
-        // &::before,
-        // &::after {
-        //     content: '';
-        //     display: block;
-        //     position: absolute;
-        //     width: $Rhombus-size;
-        //     height: $Rhombus-size;
-        //     background-color: $White; /* Цвет фона ромба */
-        //     transform: rotate(45deg); /* Поворот на 45 градусов */
-        //     z-index: 1;
-        //     top: 9px;
-        //     border: 1px solid $Black-40;
-        // }
-
-        // &::before {
-        //     left: -11px;
-        //     border-color: transparent transparent $Black-40 $Black-40 ;
-        // }
-
-        // &::after {
-        //     right: 0;
-        // }
-        
         &Prefix {
             color: $Orange-100;
             margin-right: 5px;
