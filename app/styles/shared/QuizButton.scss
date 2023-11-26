@@ -4,7 +4,12 @@
     width: 300px;
     font-size: 20px;
     font-weight: 600;
-    padding: 10px;
+    padding: 20px;
     background-color: $Orange-100;
     color: $White;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $Orange-80;
+    }
 }

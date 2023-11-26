@@ -1,4 +1,7 @@
 .QuizContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 120px 80px;
     position: relative;
     z-index: 10;

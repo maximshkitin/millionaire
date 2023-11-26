@@ -1,0 +1,19 @@
+@import '../shared/QuizButton.scss';
+
+.QuizStaticView {
+    padding: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > div {
+        width: 50%;
+    }
+
+    & .QuizStaticViewAction {
+        padding: 0 32px;
+        .QuizButton-Wrapper {
+            margin-top: 65px;
+        }
+    }
+}

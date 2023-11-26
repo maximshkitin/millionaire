@@ -1,7 +1,9 @@
 @import '../variables.scss';
 
 .QuizScoreWrapper {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 25%;
     overflow: hidden;
     background-color: #fff;

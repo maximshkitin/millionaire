@@ -8,6 +8,8 @@
     font-weight: 400;
     font-size: 20px;
     position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 
     &::before,
     &::after {

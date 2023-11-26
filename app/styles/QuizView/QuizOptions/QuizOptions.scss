@@ -5,7 +5,6 @@ $Option-height: 54px;
 .Quiz {
     
     &Options {
-        padding: 35px;
         display: flex;
         flex-direction: initial;
         flex-wrap: wrap;
@@ -15,9 +14,11 @@ $Option-height: 54px;
     }
 
     &Option {
-        width: calc(50% - 34px);
+        width: 50%;
         margin-top: 30px;
         cursor: pointer;
+        padding: 0 34px;
+        overflow: hidden;
 
         &Prefix {
             color: $Orange-100;

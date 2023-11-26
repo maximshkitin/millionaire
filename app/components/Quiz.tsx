@@ -92,7 +92,9 @@ export const Quiz: React.FC = () => {
           buttonText="Start"
           handleClick={handleStart}
         >
-          <QuizTextBox className="QuizTitle">Who wants to be?</QuizTextBox>
+          <QuizTextBox className="QuizTitle">
+            Who wants to be a millionaire?
+          </QuizTextBox>
         </QuizStaticView>
       )}
 

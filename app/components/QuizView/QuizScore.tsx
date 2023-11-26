@@ -28,7 +28,7 @@ export function QuizScore({ scoreList, currentLevelIndex }: QuizScoreProps) {
         <div className="QuizScore">
            { scoreList?.slice().reverse().map(score => (
               <QuizInfoOption key={score} className={getScoreItemClassName(score, scoreList[currentLevelIndex])}>
-                 <span>{score}</span>
+                 <span>${score?.toLocaleString()}</span>
               </QuizInfoOption>
             )
           )}
