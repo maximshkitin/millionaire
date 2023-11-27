@@ -12,8 +12,8 @@ export function QuizButton({
   children,
 }: QuizButtonProps) {
   return (
-    <div className="QuizButton-Wrapper">
-      <button className={className} onClick={handleClick}>
+    <div className="QuizButtonWrapper">
+      <button className={`QuizButton ${className}`} onClick={handleClick}>
         {children}
       </button>
     </div>

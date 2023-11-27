@@ -5,6 +5,9 @@ import { AnswerOption } from '@/app/config/types';
 import { QuizOptions } from './QuizOptions';
 import { QuizButton } from '../../shared';
 
+import '@/app/styles/shared/QuizButton.scss';
+// import '@/app/styles/QuizView/QuizOptions/QuizOptionsMultiselect.scss';
+
 interface QuizOptionsMultiselectProps {
   options: AnswerOption[]
   correctAnswer: string[]

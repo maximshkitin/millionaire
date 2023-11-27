@@ -13,8 +13,16 @@
         background-color: $Orange-80;
     }
 
+    &:focus {
+        background-color: $Orange-120;
+    }
+
     @media screen and (max-width: 767px) {
         width: 100%;
         font-size: 14px;
+
+        &Wrapper {
+            padding: 0 15px;
+        }
     }
 }

@@ -1,11 +1,14 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import { AnswerOption, QuestionType, QuestionTypeValue } from '@/app/config/types';
 import { QuizScore } from './QuizScore';
 import { QuizOptions, QuizOptionsMultiselect } from './QuizOptions';
+import { QuizIconSidebar } from '../shared';
 
 import '@/app/styles/QuizView/QuizView.scss';
+import '@/app/styles/shared/QuizIconSidebar.scss'
 
 interface QuizViewProps {
   className: string
@@ -27,21 +30,31 @@ export const QuizView: React.FC<QuizViewProps> = ({
   currentLevelIndex,
   handleSubmitAnswer,
   children
-}) => (
-  <div className={className}>
-    <div className="QuizContent">
-      {children}
-      {type === QuestionTypeValue.multiselect ? (
-        <QuizOptionsMultiselect
-          options={answerOptions}
-          correctAnswer={correctAnswer}
-          handleSubmitAnswer={handleSubmitAnswer}
-        />
-      ) : (
-        <QuizOptions options={answerOptions} correctAnswer={correctAnswer} handleClick={handleSubmitAnswer} />
-      )}
+}) => {
+  
+  const [openSidebar, setOpenSidebar] = useState<boolean>(false);
+
+  const isMobileOrTablet = useMediaQuery({ maxWidth: 1023 });
+
+  const toggleSidebar = () => setOpenSidebar(!openSidebar);
+
+  return (
+    <div className={className}>
+      <div className="QuizContent">
+        {children}
+        {type === QuestionTypeValue.multiselect ? (
+          <QuizOptionsMultiselect
+            options={answerOptions}
+            correctAnswer={correctAnswer}
+            handleSubmitAnswer={handleSubmitAnswer}
+          />
+        ) : (
+          <QuizOptions options={answerOptions} correctAnswer={correctAnswer} handleClick={handleSubmitAnswer} />
+        )}
+      </div>
+      
+      { isMobileOrTablet &&<QuizIconSidebar type={'hamburger'} toggleSidebar={toggleSidebar} /> }
+      <QuizScore open={openSidebar} toggleSidebar={toggleSidebar} scoreList={scoreList} currentLevelIndex={currentLevelIndex} />
     </div>
-    
-    <QuizScore scoreList={scoreList} currentLevelIndex={currentLevelIndex} />
-  </div>
-);
+  )
+};
