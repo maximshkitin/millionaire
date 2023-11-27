@@ -10,6 +10,7 @@ import {
   useDispatch,
   useSelector,
   updateScore,
+  showAnswerResult
 } from '@/lib/redux';
 import {
   RootState, AnswerOption, Question, Level,
@@ -66,22 +67,29 @@ export const Quiz: React.FC = () => {
   // app flow
   const handleSubmitAnswer = (answer: AnswerOption[]) => {
     dispatch(logAnswer({ question: currentQuestion, answer }));
+    dispatch(showAnswerResult(answer));
 
-    if (checkIfCorrect(answer, correctAnswer)) {
+    // delay for showing answer results
+    setTimeout(() => {
+      if (checkIfCorrect(answer, correctAnswer)) {
 
-      const currentScore = levels[currentLevel - 1].score;
-
-      // avoiding '+ 1' because level count statrs from '1' while arrays do from '0'
-      if (levels[currentLevel]?.score) { // next score value.
-        dispatch(incrementLevel());
-        dispatch(updateScore(currentScore));
+        const currentScore = levels[currentLevel - 1].score;
+  
+        // avoiding '+ 1' because level count statrs from '1' while arrays do from '0'
+        if (levels[currentLevel]?.score) { // next score value.
+          dispatch(incrementLevel());
+          dispatch(updateScore(currentScore));
+          dispatch(showAnswerResult(null));
+        } else {
+          dispatch(updateScore(currentScore));
+          dispatch(gameOver());
+        }
       } else {
-        dispatch(updateScore(currentScore));
         dispatch(gameOver());
       }
-    } else {
-      dispatch(gameOver());
-    }
+    }, 2000)
+
+    
   };
 
   return (
@@ -103,6 +111,7 @@ export const Quiz: React.FC = () => {
           className="QuizWrapper"
           type={questionType}
           answerOptions={options}
+          correctAnswer={correctAnswer}
           currentLevelIndex={currentLevel - 1}
           scoreList={levels?.map((level) => level.score)}
           handleSubmitAnswer={handleSubmitAnswer}

@@ -7,8 +7,6 @@ export const checkAnswer = (
 ): boolean => {
   const answerIds = answer?.map((option) => option.id);
 
-  console.log(answerIds);
-
   if (answerIds.length !== correctAnswer.length) {
     return false;
   }

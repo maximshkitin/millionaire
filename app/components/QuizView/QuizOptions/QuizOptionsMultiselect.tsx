@@ -7,11 +7,13 @@ import { QuizButton } from '../../shared';
 
 interface QuizOptionsMultiselectProps {
   options: AnswerOption[]
+  correctAnswer: string[]
   handleSubmitAnswer: (selectedOptions: AnswerOption[]) => void
 }
 
 export const QuizOptionsMultiselect: React.FC<QuizOptionsMultiselectProps> = ({
   options,
+  correctAnswer,
   handleSubmitAnswer,
 }) => {
   const [selectedOptions, setSelectedOptions] = useState<AnswerOption[]>([]);
@@ -33,7 +35,11 @@ export const QuizOptionsMultiselect: React.FC<QuizOptionsMultiselectProps> = ({
 
   return (
     <>
-      <QuizOptions options={options} handleClick={toggleSelection} />
+      <QuizOptions 
+        options={options} 
+        currentSelection={selectedOptions} 
+        correctAnswer={correctAnswer}
+        handleClick={toggleSelection} />
       <QuizButton handleClick={() => handleSubmitAnswer(selectedOptions)}>
         Answer
       </QuizButton>

@@ -8,6 +8,7 @@ export interface QuizState {
   currentScore: number
   answerLogs: UserAnswer[]
   isOngoing: boolean | null
+  currentAnswer: AnswerOption[] | null
 }
 
 export interface UserAnswer {

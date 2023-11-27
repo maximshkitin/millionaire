@@ -11,6 +11,10 @@ $Option-height: 54px;
         align-items: baseline;
         justify-content: space-between;
         width: 100%;
+        
+        &.answered {
+            pointer-events: none;
+        }
     }
 
     &Option {
@@ -53,8 +57,24 @@ $Option-height: 54px;
                 }
             }
         }
-        &.correct {
-            pointer-events: none;
+        &.selected {
+            .QuizInfoOption {
+                background-color: $Orange-10;
+                border-color: $Orange-100 transparent $Orange-100 transparent;
+
+                & .QuizOptionTriangleBorder,
+                &::before,
+                &::after {
+                    background-color: $Orange-100;
+                }
+
+                & .QuizOptionTriangle {
+                    border-right-color: $Orange-10;
+                }
+            }
+        }
+        &.correct,
+        &.correct.selected {
             .QuizInfoOption {
                 background-color: $Green-40;
                 border-color: $Green-100 transparent $Green-100 transparent;
@@ -71,8 +91,8 @@ $Option-height: 54px;
             }
         }
 
-        &.incorrect {
-            pointer-events: none;
+        &.incorrect,
+        &.incorrect.selected {
             .QuizInfoOption {
                 background-color: $Red-5;
                 border-color: $Red-100 transparent $Red-100 transparent;
@@ -85,24 +105,6 @@ $Option-height: 54px;
 
                 & .QuizOptionTriangle {
                     border-right-color: $Red-5;
-                }
-            }
-        }
-
-        &.selected {
-            pointer-events: none;
-            .QuizInfoOption {
-                background-color: $Orange-10;
-                border-color: $Orange-100 transparent $Orange-100 transparent;
-
-                & .QuizOptionTriangleBorder,
-                &::before,
-                &::after {
-                    background-color: $Orange-100;
-                }
-
-                & .QuizOptionTriangle {
-                    border-right-color: $Orange-10;
                 }
             }
         }

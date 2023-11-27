@@ -1,1 +1,0 @@
-export const classes = (...classList: string[]):string => classList.join(' ');

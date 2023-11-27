@@ -12,6 +12,7 @@ interface QuizViewProps {
   type: QuestionType
   answerOptions: AnswerOption[]
   scoreList: number[]
+  correctAnswer: string[]
   currentLevelIndex: number
   handleSubmitAnswer: (answer: AnswerOption[]) => void
   children: React.ReactNode
@@ -22,6 +23,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
   type,
   answerOptions,
   scoreList,
+  correctAnswer,
   currentLevelIndex,
   handleSubmitAnswer,
   children
@@ -32,10 +34,11 @@ export const QuizView: React.FC<QuizViewProps> = ({
       {type === QuestionTypeValue.multiselect ? (
         <QuizOptionsMultiselect
           options={answerOptions}
+          correctAnswer={correctAnswer}
           handleSubmitAnswer={handleSubmitAnswer}
         />
       ) : (
-        <QuizOptions options={answerOptions} handleClick={handleSubmitAnswer} />
+        <QuizOptions options={answerOptions} correctAnswer={correctAnswer} handleClick={handleSubmitAnswer} />
       )}
     </div>
     

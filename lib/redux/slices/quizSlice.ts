@@ -1,9 +1,10 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { QuizState, UserAnswer } from '@/app/config/types';
+import { AnswerOption, QuizState, UserAnswer } from '@/app/config/types';
 
 const initialState: QuizState = {
   currentLevel: 1,
   currentScore: 0,
+  currentAnswer: null,
   answerLogs: [],
   isOngoing: null,
 };
@@ -20,6 +21,7 @@ export const quizSlice = createSlice({
       state.currentScore = 0;
       state.answerLogs = [];
       state.isOngoing = true;
+      state.currentAnswer = null;
     },
     gameOver(state) {
       state.isOngoing = false;
@@ -35,6 +37,9 @@ export const quizSlice = createSlice({
     logAnswer(state, action: PayloadAction<UserAnswer>) {
       state.answerLogs = [...state.answerLogs, action.payload];
     },
+    showAnswerResult(state, action: PayloadAction<AnswerOption[] | null>) {
+      state.currentAnswer = action.payload;
+    }
   },
 });
 
@@ -45,4 +50,5 @@ export const {
   updateScore,
   startQuiz,
   resetQuiz,
+  showAnswerResult
 } = quizSlice.actions;
