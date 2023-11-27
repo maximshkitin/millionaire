@@ -1,13 +1,13 @@
 import React from 'react';
 
-import '@/app/styles/QuizView/QuizOptions/QuizOptionTriangle.scss';
+import '@/app/styles/shared/QuizOptionTriangle.scss';
 
-interface QuizInfoOptionTriangleProps {
+interface QuizOptionTriangleProps {
   isReversed?: boolean;
   isMobile?: boolean
 }
 
-export function QuizOptionTriangle({ isReversed = false, isMobile = false }: QuizInfoOptionTriangleProps) {
+export function QuizOptionTriangle({ isReversed = false, isMobile = false }: QuizOptionTriangleProps) {
 
     const reversedPostfix = isReversed ? 'reversed' : '';
     const mobilePostfix = isMobile ? 'mobile' : '';

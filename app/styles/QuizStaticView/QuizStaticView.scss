@@ -16,4 +16,22 @@
             margin-top: 65px;
         }
     }
+
+    @media screen and (max-width: 767px) {
+        padding: 50px 15px;
+        flex-direction: column;
+        text-align: center;
+
+        > div {
+            width: 100%;
+        } 
+        & .QuizStaticViewAction {
+            padding: 0;
+        }
+        
+        .QuizTitle {
+            margin-top: 40px;
+            font-size: 32px;
+        }
+    }
 }

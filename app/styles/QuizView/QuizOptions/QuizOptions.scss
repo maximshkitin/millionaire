@@ -27,6 +27,11 @@ $Option-height: 54px;
             z-index: 2;
         }
 
+        @media screen and (max-width: 767px) {
+            width: 100%;
+            margin-top: 8px;
+        }
+
         .QuizInfoOption {
             background-color: #fff;
             width: 100%;
@@ -35,6 +40,7 @@ $Option-height: 54px;
             border: 1px solid $Black-40;
             border-color: $Black-40 transparent $Black-40 transparent;
             font-weight: 400;
+            text-align: left;
             position: relative;
 
             &:hover {

@@ -7,6 +7,11 @@
     width: 25%;
     overflow: hidden;
     background-color: #fff;
+
+    @media screen and (max-width: 1023px) {
+        width: 100%;
+        display: none;
+    }
 }
 
 .QuizScore {
@@ -35,6 +40,19 @@
         width: 64%;
         margin: 8px 0;
         padding: 8px;
+
+        @media (max-width: 1279px) {
+            width: 76%;
+            
+            &::before,
+            &::after {
+                width: calc(12% - 12px);
+            }
+        }
+
+        // @media screen and (max-width: 767px) {
+
+        // }
 
         &::before,
         &::after {
@@ -66,9 +84,10 @@
     }
 
     .QuizOptionTriangle {
-        border-width: 17px 21px 17px 0;
-        top: 0;
-        left: -12px;
+        border-width: 18px 20px 18px 0;
+        top: -0.5px;
+        left: -11px;
+        z-index: 100;
 
         &Wrapper {
            top: -6px;
@@ -95,8 +114,8 @@
         }
     }
     .QuizOptionTriangleWrapper.reversed .QuizOptionTriangle {
-        right: -22px;
-        top: -22px;
+        right: -21px;
+        top: -23.5px;
         &Border {
             transform: rotate(42deg);
             &Top {

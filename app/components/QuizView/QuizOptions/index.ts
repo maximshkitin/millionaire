@@ -1,3 +1,3 @@
 export * from './QuizOptions';
 export * from './QuizOptionsMultiselect';
-export * from './QuizOptionTriangle';
+export * from '../../shared/QuizOptionTriangle';

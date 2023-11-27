@@ -5,6 +5,6 @@ interface QuizTextPropsProps {
   children: ReactNode;
 }
 
-export function QuizTextBox({ className, children }: QuizTextPropsProps) {
-  return <div className={className}>{children}</div>;
+export function QuizTextBox({ className = '', children }: QuizTextPropsProps) {
+  return <div className={`QuizTextBox ${className}`}>{children}</div>;
 }
