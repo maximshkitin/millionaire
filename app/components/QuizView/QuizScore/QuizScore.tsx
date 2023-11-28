@@ -15,7 +15,7 @@ interface QuizScoreProps {
 
 export function QuizScore({ scoreList, currentLevelIndex, open = false, toggleSidebar }: QuizScoreProps) {
 
-  const isMobileOrTablet = useMediaQuery({ maxWidth: 1023 });
+  const isMobileOrTablet = useMediaQuery({ maxWidth: 1024 });
 
   const getScoreItemClassName = (score: number, nextScore: number): string => {
 

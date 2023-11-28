@@ -34,7 +34,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
   
   const [openSidebar, setOpenSidebar] = useState<boolean>(false);
 
-  const isMobileOrTablet = useMediaQuery({ maxWidth: 1023 });
+  const isMobileOrTablet = useMediaQuery({ maxWidth: 1024 });
 
   const toggleSidebar = () => setOpenSidebar(!openSidebar);
 

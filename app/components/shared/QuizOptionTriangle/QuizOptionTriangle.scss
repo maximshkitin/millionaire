@@ -15,6 +15,15 @@
             left: initial;
             right: 0;
         }
+
+        @media screen and (max-width: 1024px) {
+            left: -35px;
+
+            &.reversed {
+                right: 3px;
+            }
+        }
+        
     }
 }
 
@@ -67,9 +76,9 @@
         right: -37px;
         top: -21px;
 
-        @media screen and (max-width: 991.98px) {
+        @media screen and (max-width: 1024px) {
             right: -34px;
-            top: -11px;
+            top: -9px;
 
             &Border {
                 
