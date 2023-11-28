@@ -22,6 +22,7 @@
   z-index: 100000;
 
   @media screen and (max-width: 767px) {
+    // substracting 60px to compensate iPhone's Safari tab height 
     height: calc(100vh - 60px);
   }
 

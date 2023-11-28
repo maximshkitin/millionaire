@@ -76,8 +76,9 @@
             flex-direction: column;
             justify-content: space-between;
             .QuizButtonWrapper {
-                margin: 0;
-                padding-bottom: 50px;
+                width: 100%;
+                margin: 0 auto;
+                padding-bottom: 60px;
             }
         }
 
@@ -95,7 +96,7 @@
         }
     }
 
-    @media screen and (max-width: 1023px) and (orientation: landscape) {
+    @media screen and (max-width: 767px) and (orientation: landscape) {
         .QuizStaticViewAction .QuizButtonWrapper {
             width: 400px;
             margin: 0 auto;
