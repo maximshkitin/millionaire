@@ -67,6 +67,24 @@
         right: -37px;
         top: -21px;
 
+        @media screen and (max-width: 991.98px) {
+            right: -34px;
+            top: -11px;
+
+            &Border {
+                
+                &Top {
+                    top: -2px;
+                    right: -41px;
+                }
+
+                &Bottom {
+                    bottom: -28px;
+                    right: -41px;
+                }
+            }
+        }
+
         &Border {
             &Top {
                 bottom: -26px;

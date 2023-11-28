@@ -80,11 +80,20 @@
                 padding-bottom: 50px;
             }
         }
-        
+
         .QuizTitle {
             margin: 20px 0;
             padding: 0;
             font-size: 32px;
+        }
+    }
+}
+
+.QuizFinalScreen {
+
+    .QuizTitle {
+        @media screen and (max-width: 767px) {
+            margin-top: 0;
         }
     }
 }

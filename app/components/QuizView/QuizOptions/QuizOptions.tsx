@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import { QuizInfoOption } from '../../shared';
+import { QuizIconLoading, QuizInfoOption } from '../../shared';
 
 import { AnswerOption, RootState } from '@/app/config/types';
 import { generateAlphabet } from '@/app/helpers/generateAlphabet';
@@ -66,6 +66,9 @@ export const QuizOptions: React.FC<QuizOptionsProps> = ({
     return (
     <>
       <div className={`QuizOptions ${isAnswered}`}>
+        
+        {currentAnswer && <QuizIconLoading loading={true} />}
+        
         {options.map((option, index) => (
             <div 
               id={option.id} 

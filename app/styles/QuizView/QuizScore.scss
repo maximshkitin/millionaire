@@ -13,7 +13,7 @@
     }
 
     @media screen and (max-width: 1023px) {
-        transition: transform 0.3s ease-in-out;
+        transition: transform 0.2s ease-in-out;
         transform: translateX(100%);
         position: absolute;
         top: 0;
@@ -36,8 +36,6 @@
     &Item {
         width: 100%;
         color: $Black-100;
-        font-size: 20px;
-        font-weight: 400;
 
         &Active {
             color: $Orange-100;
@@ -61,22 +59,9 @@
         margin: 8px 0;
         padding: 8px;
 
-        @media (max-width: 1279px) {
-            width: 76%;
-            
-            &::before,
-            &::after {
-                width: calc(12% - 12px);
-            }
-        }
-
-        // @media screen and (max-width: 767px) {
-
-        // }
-
         &::before,
         &::after {
-            width: calc(18% - 12px);
+            width: 18%;
             top: unset;
         }
 
@@ -87,6 +72,26 @@
         &::after {
             right: 0;
             transform: translateY(-12px);
+        }
+
+        @media (max-width: 1279px) {
+            width: 76%;
+            
+            &::before,
+            &::after {
+                width: 12%;
+            }
+        }
+
+        @media screen and (max-width: 991.98px) {
+            &::before {
+                transform: translateY(7.5px);
+            }
+
+            &::after {
+                transform: translateY(-8.5px);
+            }
+            
         }
 
         &.QuizScoreItemActive {
@@ -121,6 +126,8 @@
             width: 24px;
             left: -15px;
 
+            z-index: 101;
+
             &Top {
                 top: 9px;
             }
@@ -132,7 +139,28 @@
                 transform: rotate(-138deg);
             }
         }
+
+        @media screen and (max-width: 991.98px) {
+            top: 2px;
+            left: -7px;
+            border-width: 12px 14px 12px 0;
+
+            &Border {
+                width: 19px;
+
+                &Top {
+                    top: 7px;
+                    left: -10px;
+                }
+
+                &Bottom {
+                    top: 20px;
+                    left: -10px;
+                }
+            }
+        }
     }
+
     .QuizOptionTriangleWrapper.reversed .QuizOptionTriangle {
         right: -21px;
         top: -23.5px;
@@ -151,6 +179,24 @@
                 left: unset;
                 bottom: unset;
                 transform: rotate(138deg);
+            }
+        }
+
+        @media screen and (max-width: 991.98px) {
+            right: -18px;
+            top: -14px;
+
+            &Border {
+
+                &Top {
+                    bottom: 8px;
+                    right: -20px; 
+                }
+
+                &Bottom {
+                    top: 4px;
+                    right: -20px;
+                }
             }
         }
     }

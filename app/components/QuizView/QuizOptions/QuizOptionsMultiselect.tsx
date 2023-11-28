@@ -5,8 +5,7 @@ import { AnswerOption } from '@/app/config/types';
 import { QuizOptions } from './QuizOptions';
 import { QuizButton } from '../../shared';
 
-import '@/app/styles/shared/QuizButton.scss';
-// import '@/app/styles/QuizView/QuizOptions/QuizOptionsMultiselect.scss';
+import '@/app/styles/QuizView/QuizOptions/QuizOptionsMultiselect.scss';
 
 interface QuizOptionsMultiselectProps {
   options: AnswerOption[]
@@ -43,7 +42,7 @@ export const QuizOptionsMultiselect: React.FC<QuizOptionsMultiselectProps> = ({
         currentSelection={selectedOptions} 
         correctAnswer={correctAnswer}
         handleClick={toggleSelection} />
-      <QuizButton handleClick={() => handleSubmitAnswer(selectedOptions)}>
+      <QuizButton handleClick={() => handleSubmitAnswer(selectedOptions)} disabled={!selectedOptions.length}>
         Answer
       </QuizButton>
     </>

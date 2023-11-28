@@ -70,9 +70,10 @@ export const Quiz: React.FC = () => {
   // app flow
   const handleSubmitAnswer = (answer: AnswerOption[]) => {
     dispatch(logAnswer({ question: currentQuestion, answer }));
+    
     dispatch(showAnswerResult(answer));
 
-    // delay for showing answer results
+    // emulating asyncrosity. this is a delay for showing answer results
     setTimeout(() => {
       if (checkIfCorrect(answer, correctAnswer)) {
 
@@ -130,12 +131,14 @@ export const Quiz: React.FC = () => {
             buttonText="Try Again"
             handleClick={handleReset}
           >
-            <QuizTextBox className="QuizSubtitle">Total score:</QuizTextBox>
-            <QuizTextBox className="QuizTitle">
-              ${currentScore?.toLocaleString()}
-              {' '}
-              earned
-            </QuizTextBox>
+            <div>
+              <QuizTextBox className="QuizSubtitle">Total score:</QuizTextBox>
+              <QuizTextBox className="QuizTitle">
+                ${currentScore?.toLocaleString()}
+                {' '}
+                earned
+              </QuizTextBox>
+            </div>
           </QuizStaticView>
       )}
     </div>

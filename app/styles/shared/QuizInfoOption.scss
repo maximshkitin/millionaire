@@ -28,4 +28,14 @@
         left: initial;
         right: -36px;
     }
+
+    @media screen and (max-width: 1024px) {
+        padding: 18px 15px;
+        font-size: 14px;
+
+        &::before,
+        &::after {
+            width: 17px;
+        }
+    }
 }

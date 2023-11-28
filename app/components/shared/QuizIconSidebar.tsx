@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+
 import '@/app/styles/shared/QuizIconSidebar.scss';
 
 interface QuizIconSidebarProps {

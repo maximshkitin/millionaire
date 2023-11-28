@@ -1,8 +1,8 @@
 @import '../../variables.scss';
 
-$Option-height: 54px;
-
 .Quiz {
+    position: relative;
+    overflow: hidden;
     
     &Options {
         display: flex;
@@ -11,6 +11,7 @@ $Option-height: 54px;
         align-items: baseline;
         justify-content: space-between;
         width: 100%;
+        position: relative;
         
         &.answered {
             pointer-events: none;
@@ -54,6 +55,52 @@ $Option-height: 54px;
                 &::before,
                 &::after {
                     background-color: $Orange-100;
+                }
+            }
+
+            .QuizOptionTriangle {
+                @media screen and (max-width: 991.98px) {
+                    top: 5px;
+                    left: 3px;
+                    border-style: solid;
+                    border-width: 24px 20px 24px 0;
+            
+                    &Border {
+                        width: 37px;
+                        
+                        &Top {
+                            top: 14px;
+                            left: -4px;
+                        }
+            
+                        &Bottom {
+                            top: 43px;
+                            left: -4px;
+                        }
+                    }
+                }
+            }
+    
+            .QuizOptionTriangleWrapper.reversed {
+                & .QuizOptionTriangle {
+                    @media screen and (max-width: 991.98px) {
+                        right: -34px;
+                        top: -11px;
+            
+                        &Border {
+
+                            &Top {
+                                bottom: -28px;
+                                right: -41px;
+                            }
+                            
+                            &Bottom {
+                                top: -2px;
+                                right: -41px;
+                            }
+            
+                        }
+                    }
                 }
             }
         }

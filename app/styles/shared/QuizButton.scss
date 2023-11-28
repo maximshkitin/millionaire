@@ -17,6 +17,11 @@
         background-color: $Orange-120;
     }
 
+    &:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+    }
+
     @media screen and (max-width: 991.98px) {
         width: 100%;
 
@@ -31,4 +36,9 @@
         width: 100%;
         font-size: 14px;
     }
+}
+
+.a {
+    margin-top: 30px;
+    padding: 0 15px;
 }
