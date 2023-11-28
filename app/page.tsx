@@ -1,4 +1,4 @@
-import { Quiz } from './components/Quiz';
+import { Quiz } from './components/Quiz/Quiz';
 
 export default function IndexPage() {
   return <Quiz />;

@@ -1,8 +1,7 @@
 import React, { ReactNode, MouseEvent } from 'react';
 import { QuizButton, QuizIcon } from '../shared';
 
-
-import '@/app/styles/QuizStaticView/QuizStaticView.scss';
+import './QuizStaticView.scss';
 
 interface QuizStaticViewProps {
   className: string

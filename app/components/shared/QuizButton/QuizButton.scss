@@ -1,0 +1,44 @@
+@import '@/app/styles/_variables';
+
+.QuizButton {
+    width: 300px;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 20px;
+    background-color: $Orange-100;
+    color: $White;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $Orange-80;
+    }
+
+    &:focus {
+        background-color: $Orange-120;
+    }
+
+    &:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        width: 100%;
+
+        
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 991.98px) {
+        font-size: 16px;
+    }
+
+    @media screen and (max-width: 767px) {
+        width: 100%;
+        font-size: 14px;
+    }
+}
+
+// .a {
+//     margin-top: 30px;
+//     padding: 0 15px;
+// }

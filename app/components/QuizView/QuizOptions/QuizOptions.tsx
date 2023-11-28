@@ -1,14 +1,14 @@
 'use client';
 
 import React from 'react';
+import { useSelector } from '@/lib/redux';
 
 import { QuizIconLoading, QuizInfoOption } from '../../shared';
 
 import { AnswerOption, RootState } from '@/app/config/types';
 import { generateAlphabet } from '@/app/helpers/generateAlphabet';
 
-import '@/app/styles/QuizView/QuizOptions/QuizOptions.scss';
-import { useSelector } from '@/lib/redux';
+import './QuizOptions.scss';
 
 interface QuizOptionsProps {
   options: AnswerOption[]

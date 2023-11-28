@@ -3,12 +3,12 @@
 import React, { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { AnswerOption, QuestionType, QuestionTypeValue } from '@/app/config/types';
-import { QuizScore } from './QuizScore';
+import { QuizScore } from './QuizScore/QuizScore';
 import { QuizOptions, QuizOptionsMultiselect } from './QuizOptions';
 import { QuizIconSidebar } from '../shared';
 
-import '@/app/styles/QuizView/QuizView.scss';
-import '@/app/styles/shared/QuizIconSidebar.scss'
+import '../shared/QuizIconSidebar/QuizIconSidebar.scss'
+import './QuizView.scss';
 
 interface QuizViewProps {
   className: string

@@ -1,0 +1,170 @@
+@import '@/app/styles/_variables';
+
+.Quiz {
+    position: relative;
+    overflow: hidden;
+    
+    &Options {
+        display: flex;
+        flex-direction: initial;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-between;
+        width: 100%;
+        position: relative;
+        
+        &.answered {
+            pointer-events: none;
+        }
+
+        @media screen and (max-width: 767px) {
+            flex: 60%;
+            margin-bottom: 100px;
+            align-content: end;
+        }
+
+        @media screen and (max-width: 767px) and (orientation: landscape) {
+            margin-bottom: 30px;
+          }
+    }
+
+
+    &Option {
+        width: 50%;
+        margin-top: 30px;
+        cursor: pointer;
+        padding: 0 34px;
+        overflow: hidden;
+
+        &Prefix {
+            color: $Orange-100;
+            margin-right: 10px;
+            position: relative;
+            z-index: 2;
+        }
+
+        @media screen and (max-width: 767px) {
+            width: 100%;
+            margin-top: 8px;
+        }
+
+        & .QuizInfoOption {
+            background-color: #fff;
+            width: 100%;
+            padding: 24px 15px;
+            border-radius: 15px;
+            border: 1px solid $Black-40;
+            border-color: $Black-40 transparent $Black-40 transparent;
+            font-weight: 400;
+            text-align: left;
+            position: relative;
+
+            &:hover {
+                border-color: $Orange-100 transparent $Orange-100 transparent;
+
+                & .QuizOptionTriangleBorder,
+                &::before,
+                &::after {
+                    background-color: $Orange-100;
+                }
+            }
+
+            & .QuizOptionTriangle {
+                @media screen and (max-width: 991.98px) {
+                    top: 5px;
+                    left: 6px;
+                    border-style: solid;
+                    border-width: 24px 20px 24px 0;
+            
+                    &Border {
+                        width: 32px;
+                        
+                        &Top {
+                            top: 16px;
+                            left: 0;
+                        }
+            
+                        &Bottom {
+                            top: 41px;
+                            left: 0;
+                        }
+                    }
+                }
+            }
+    
+            & .QuizOptionTriangleWrapper.reversed {
+                & .QuizOptionTriangle {
+                    @media screen and (max-width: 991.98px) {
+                        right: -31px;
+                        top: -11px;
+            
+                        &Border {
+
+                            &Top {
+                                bottom: -26px;
+                                right: -37px;
+                            }
+                            
+                            &Bottom {
+                                top: 0px;
+                                right: -37px;
+                            }
+            
+                        }
+                    }
+                }
+            }
+        }
+        &.selected {
+            .QuizInfoOption {
+                background-color: $Orange-10;
+                border-color: $Orange-100 transparent $Orange-100 transparent;
+
+                & .QuizOptionTriangleBorder,
+                &::before,
+                &::after {
+                    background-color: $Orange-100;
+                }
+
+                & .QuizOptionTriangle {
+                    border-right-color: $Orange-10;
+                }
+            }
+        }
+        &.correct,
+        &.correct.selected {
+            .QuizInfoOption {
+                background-color: $Green-40;
+                border-color: $Green-100 transparent $Green-100 transparent;
+
+                & .QuizOptionTriangleBorder,
+                &::before,
+                &::after {
+                    background-color: $Green-100;
+                }
+
+                & .QuizOptionTriangle {
+                    border-right-color: $Green-40;
+                }
+            }
+        }
+
+        &.incorrect,
+        &.incorrect.selected {
+            .QuizInfoOption {
+                background-color: $Red-5;
+                border-color: $Red-100 transparent $Red-100 transparent;
+
+                & .QuizOptionTriangleBorder,
+                &::before,
+                &::after {
+                    background-color: $Red-100;
+                }
+
+                & .QuizOptionTriangle {
+                    border-right-color: $Red-5;
+                }
+            }
+        }
+    }
+}
