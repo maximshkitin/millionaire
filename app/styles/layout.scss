@@ -22,19 +22,6 @@
   z-index: 100000;
 }
 
-.main:after {
-  content: "";
-  position: absolute;
-  display: block;
-  top: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 0 100vh 100vw;
-  border-color: transparent transparent $Orange-10 transparent;
-  z-index: -1;
-}
-
 .header,
 .main {
   display: flex;

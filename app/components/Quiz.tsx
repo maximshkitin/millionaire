@@ -39,7 +39,10 @@ export const Quiz: React.FC = () => {
 
   const { currentLevel, currentScore, isOngoing } = useSelector(
     (state: RootState) => state.quiz,
-  )
+  );
+
+  const isStartScreenClass = isOngoing === null ? 'QuizStartScreenWrapper' : '';
+  const isFinalScreenClass = isOngoing !== null && !isOngoing ? 'QuizFinalScreenWrapper' : '';
 
   // '- 1' is needed because level count statrs from '1' 
   const currentQuestion: Question = levels?.[currentLevel - 1]?.question ?? initialQuestionState;
@@ -93,7 +96,7 @@ export const Quiz: React.FC = () => {
   };
 
   return (
-    <div className="Quiz">
+    <div className={`Quiz ${isStartScreenClass} ${isFinalScreenClass}`}>
       {isOngoing === null && ( // intro screen
         <QuizStaticView
           className="QuizStartScreen"

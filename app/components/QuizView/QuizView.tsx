@@ -53,7 +53,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
         )}
       </div>
       
-      { isMobileOrTablet &&<QuizIconSidebar type={'hamburger'} toggleSidebar={toggleSidebar} /> }
+      { isMobileOrTablet && <QuizIconSidebar type={'hamburger'} toggleSidebar={toggleSidebar} /> }
       <QuizScore open={openSidebar} toggleSidebar={toggleSidebar} scoreList={scoreList} currentLevelIndex={currentLevelIndex} />
     </div>
   )
