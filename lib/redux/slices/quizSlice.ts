@@ -6,7 +6,7 @@ const initialState: QuizState = {
   currentScore: 0,
   currentAnswer: null,
   answerLogs: [],
-  isOngoing: false,
+  isOngoing: null,
 };
 
 export const quizSlice = createSlice({
