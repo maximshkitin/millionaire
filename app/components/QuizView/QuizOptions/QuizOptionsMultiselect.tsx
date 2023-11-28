@@ -36,7 +36,7 @@ export const QuizOptionsMultiselect: React.FC<QuizOptionsMultiselectProps> = ({
   };
 
   return (
-    <>
+    <div className='QuizOptionsMultiselect'>
       <QuizOptions 
         options={options} 
         currentSelection={selectedOptions} 
@@ -45,6 +45,6 @@ export const QuizOptionsMultiselect: React.FC<QuizOptionsMultiselectProps> = ({
       <QuizButton handleClick={() => handleSubmitAnswer(selectedOptions)} disabled={!selectedOptions.length}>
         Answer
       </QuizButton>
-    </>
+    </div>
   );
 };

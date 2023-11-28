@@ -3,4 +3,9 @@
     left: 50%;
     top: -60px;
     transform: translateX(-50%);
+    z-index: 100;
+
+    @media screen and (max-width: 767px) {
+        top: -20px;
+    }
 }

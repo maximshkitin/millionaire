@@ -20,6 +20,14 @@
   height: 100vh;
   background-color: $White;
   z-index: 100000;
+
+  @media screen and (max-width: 767px) {
+    height: calc(100vh - 60px);
+  }
+
+  @media screen and (max-width: 767px) and (orientation: landscape) {
+    height: auto;
+  }
 }
 
 .header,

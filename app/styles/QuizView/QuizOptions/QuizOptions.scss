@@ -16,7 +16,18 @@
         &.answered {
             pointer-events: none;
         }
+
+        @media screen and (max-width: 767px) {
+            flex: 60%;
+            margin-bottom: 85px;
+            align-content: end;
+        }
+
+        @media screen and (max-width: 767px) and (orientation: landscape) {
+            margin-bottom: 30px;
+          }
     }
+
 
     &Option {
         width: 50%;

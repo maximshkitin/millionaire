@@ -4,3 +4,15 @@
         padding: 0 15px;
     }
 }
+
+.QuizOptionsMultiselect {
+
+    @media screen and (max-width: 767px) {
+        flex: 60%;
+
+        .QuizOptions {
+            flex: unset;
+            margin-bottom: 0;
+        }
+    }
+}
