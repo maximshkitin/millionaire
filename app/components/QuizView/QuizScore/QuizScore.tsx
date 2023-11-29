@@ -20,11 +20,11 @@ export function QuizScore({ scoreList, currentLevelIndex, open = false, toggleSi
   const getScoreItemClassName = (score: number, nextScore: number): string => {
 
     if (score === nextScore) {
-      return "QuizScoreItem QuizScoreItemActive";
+      return "QuizScoreItem QuizScoreItem--Active";
     }
 
     if (score < nextScore) {
-      return "QuizScoreItem QuizScoreItemInactive";
+      return "QuizScoreItem QuizScoreItem--Inactive";
     }
 
     return "QuizScoreItem";
@@ -35,7 +35,7 @@ export function QuizScore({ scoreList, currentLevelIndex, open = false, toggleSi
         <div className="QuizScore">
            { scoreList?.slice().reverse().map(score => (
               <QuizInfoOption key={score} className={getScoreItemClassName(score, scoreList[currentLevelIndex])}>
-                 <div className='QuizScoreItem--Text'>${score?.toLocaleString()}</div>
+                 <div className='QuizScoreItemText'>${score?.toLocaleString()}</div>
               </QuizInfoOption>
             )
           )}

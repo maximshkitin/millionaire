@@ -38,15 +38,15 @@
         width: 100%;
         color: $Black-100;
 
-        &Active {
+        &--Active {
             color: $Orange-100;
         }
 
-        &Inactive {
+        &--Inactive {
             color: $Black-40;
         }
 
-        &--Text {
+        &Text {
             background: $White;
             position: relative;
             z-index: map-get($zIndex, quizContent);
@@ -94,7 +94,7 @@
             }
         }
 
-        &.QuizScoreItemActive {
+        &.QuizScoreItem--Active {
             border-color: $Orange-100 transparent $Orange-100 transparent;
             & .QuizOptionTriangleBorder,
             &::before,
@@ -103,7 +103,7 @@
             }
         }
 
-        &.QuizScoreItemInactive {
+        &.QuizScoreItem--Inactive {
             color: $Black-40;
         }
 
