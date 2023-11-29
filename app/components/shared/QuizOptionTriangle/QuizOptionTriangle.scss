@@ -16,7 +16,7 @@
             right: 0;
         }
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: $breakpoint-lg) {
             left: -35px;
 
             &.reversed {
@@ -76,7 +76,7 @@
         right: -37px;
         top: -21px;
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: $breakpoint-lg) {
             right: -34px;
             top: -9px;
 

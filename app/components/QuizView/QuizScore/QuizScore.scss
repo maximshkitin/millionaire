@@ -6,13 +6,14 @@
     justify-content: center;
     width: 25%;
     overflow: hidden;
-    background-color: #fff;
+    background-color: $White;
+    position: relative;
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: $breakpoint-lg) {
         width: 100%;
     }
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: $breakpoint-lg) {
         transition: transform 0.2s ease-in-out;
         transform: translateX(100%);
         position: absolute;
@@ -20,7 +21,7 @@
         bottom: 0;
         left: 0;
         right: 0;
-        z-index: 10000;
+        z-index: map-get($zIndex, sidebar);
 
         &.open {
             transform: translateX(0);
@@ -46,9 +47,9 @@
         }
 
         &--Text {
-            background: #fff;
+            background: $White;
             position: relative;
-            z-index: 10000;
+            z-index: map-get($zIndex, quizContent);
         }
     }
 
@@ -74,7 +75,7 @@
             transform: translateY(-12px);
         }
 
-        @media (max-width: 1279px) {
+        @media screen and (max-width: $breakpoint-xl) {
             width: 76%;
             
             &::before,
@@ -83,7 +84,7 @@
             }
         }
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: $breakpoint-lg) {
             &::before {
                 transform: translateY(7.5px);
             }
@@ -91,7 +92,6 @@
             &::after {
                 transform: translateY(-8.5px);
             }
-            
         }
 
         &.QuizScoreItemActive {
@@ -111,8 +111,8 @@
             border-width: 18px 20px 18px 0;
             top: -0.5px;
             left: -11px;
-            z-index: 100;
-    
+            z-index: map-get($zIndex, triangle);
+
             &Wrapper {
                top: -6px;
                 bottom: 0;
@@ -124,18 +124,21 @@
                 }
             }
             
+            
+    
+
     
             &Border {
                 transform: rotate(-42deg);
                 width: 24px;
                 left: -15px;
-    
-                z-index: 101;
-    
+
+                z-index: map-get($zIndex, triangle);
+
                 &Top {
                     top: 9px;
                 }
-        
+
                 &Bottom {
                     bottom: unset;
                     top: 25px;
@@ -143,20 +146,20 @@
                     transform: rotate(-138deg);
                 }
             }
-    
-            @media screen and (max-width: 1024px) {
+
+            @media screen and (max-width: $breakpoint-lg) {
                 top: 2px;
                 left: -7px;
                 border-width: 12px 14px 12px 0;
-    
+
                 &Border {
                     width: 19px;
-    
+
                     &Top {
                         top: 7px;
                         left: -10px;
                     }
-    
+
                     &Bottom {
                         top: 20px;
                         left: -10px;
@@ -164,19 +167,21 @@
                 }
             }
         }
-    
+
         .QuizOptionTriangleWrapper.reversed .QuizOptionTriangle {
             right: -21px;
             top: -23.5px;
+
             &Border {
                 transform: rotate(42deg);
+
                 &Top {
                     bottom: 13px;
                     right: -25px;
                     left: unset;
                     top: unset;
                 }
-        
+
                 &Bottom {
                     top: 2px;
                     right: -25px;
@@ -185,18 +190,17 @@
                     transform: rotate(138deg);
                 }
             }
-    
-            @media screen and (max-width: 1024px) {
+
+            @media screen and (max-width: $breakpoint-lg) {
                 right: -17px;
                 top: -14px;
-    
+
                 &Border {
-    
                     &Top {
                         bottom: 8px;
                         right: -20px; 
                     }
-    
+
                     &Bottom {
                         top: 4px;
                         right: -20px;

@@ -22,3 +22,45 @@ $Black-5: #F5F5F7;
 $White: #fff;
 
 
+// z-index structure
+$zIndexBase: 100;
+
+$zIndex: (
+    negative: -1,
+    triangle: $zIndexBase,
+    quizContent: $zIndexBase + 10,
+    score: $zIndexBase + 20,
+    closeIcon: $zIndexBase + 30,
+    hamburgerIcon: $zIndexBase + 40,
+    sidebar: $zIndexBase + 50,
+    loading: $zIndexBase + 60,
+    footer: $zIndexBase + 70
+);
+
+$zIndexMax: $zIndexBase + 100;
+
+
+
+// Screen Sizes
+$breakpoint-sm: 575px;
+$breakpoint-md: 767px;
+$breakpoint-lg: 991px;
+$breakpoint-xl: 1279px;
+
+// Media queries using variables
+// $media-xs: "only screen and (max-width: #{($breakpoint-sm - 1)})";
+// $media-sm: "only screen and (min-width: #{$breakpoint-sm}) and (max-width: #{($breakpoint-md - 1)})";
+// $media-md: "only screen and (min-width: #{$breakpoint-md}) and (max-width: #{($breakpoint-lg - 1)})";
+// $media-lg: "only screen and (min-width: #{$breakpoint-lg}) and (max-width: #{($breakpoint-xl - 1)})";
+// $media-xl: "only screen and (min-width: #{$breakpoint-xl})";
+
+// $media-mobiles: "only screen and (max-width: #{$breakpoint-md - 1})";
+// $media-mobile-landscape: "only screen and (max-width: #{($breakpoint-md - 1)}) and (orientation: landscape)";
+
+// Components
+$QuizOptionBorderColor: $Black-40 transparent $Black-40 transparent;
+$QuizOptionBorderColorHover: $Orange-100 transparent $Orange-100 transparent;
+$QuizOptionBorderColorCorrect: $Green-100 transparent $Green-100 transparent;
+$QuizOptionBorderColorIncorrect: $Red-100 transparent $Red-100 transparent;
+
+

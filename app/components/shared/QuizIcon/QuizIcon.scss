@@ -9,7 +9,7 @@
         min-width: 200px;
     }
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: $breakpoint-md) {
         padding: 0 45px;
         display: flex;
         align-items: flex-end;

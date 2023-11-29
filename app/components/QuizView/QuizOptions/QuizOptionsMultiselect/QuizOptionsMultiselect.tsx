@@ -35,6 +35,11 @@ export const QuizOptionsMultiselect: React.FC<QuizOptionsMultiselectProps> = ({
     setSelectedOptions(newSelectedOptions);
   };
 
+  const handleSubmitAndReset = () => {
+    handleSubmitAnswer(selectedOptions);
+    setSelectedOptions([]);
+  }
+
   return (
     <div className='QuizOptionsMultiselect'>
       <QuizOptions 
@@ -42,7 +47,7 @@ export const QuizOptionsMultiselect: React.FC<QuizOptionsMultiselectProps> = ({
         currentSelection={selectedOptions} 
         correctAnswer={correctAnswer}
         handleClick={toggleSelection} />
-      <QuizButton handleClick={() => handleSubmitAnswer(selectedOptions)} disabled={!selectedOptions.length}>
+      <QuizButton handleClick={handleSubmitAndReset} disabled={!selectedOptions.length}>
         Answer
       </QuizButton>
     </div>

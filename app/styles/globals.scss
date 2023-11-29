@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
+@import './_variables';
 // Normalisation + some custom styles
 
 * {
@@ -18,7 +19,7 @@ body {
   font-size: 32px;
   overflow: hidden;
 
-  @media screen and (max-width: 767px) and (orientation: landscape) {
+  @media screen and (max-width: $breakpoint-md) and (orientation: landscape) {
     overflow-y: auto;
   }
 }

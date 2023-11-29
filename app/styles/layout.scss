@@ -19,14 +19,14 @@
   width: 100vw;
   height: 100vh;
   background-color: $White;
-  z-index: 100000;
+  z-index: $zIndexBase;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: $breakpoint-md) {
     // substracting 60px to compensate iPhone's Safari tab height 
     height: calc(100vh - 60px);
   }
 
-  @media screen and (max-width: 767px) and (orientation: landscape) {
+  @media screen and (max-width: $breakpoint-md) and (orientation: landscape) {
     height: auto;
   }
 }

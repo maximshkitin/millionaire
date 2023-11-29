@@ -22,17 +22,17 @@
         cursor: not-allowed;
     }
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: $breakpoint-lg) {
         width: 100%;
 
         
     }
 
-    @media screen and (min-width: 768px) and (max-width: 1024px) {
+    @media screen and (min-width: 768px) and (max-width: $breakpoint-lg) {
         font-size: 16px;
     }
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: $breakpoint-md) {
         width: 100%;
         font-size: 14px;
     }
