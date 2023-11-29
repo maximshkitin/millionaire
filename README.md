@@ -45,7 +45,7 @@ Available Scripts
 In the project directory, you can run the following scripts:
 
 -   `npm run dev`: Runs the development server using Next.js.
--   `npm test`: Runs tests using React Scripts.
+-   `npm test`: Runs tests using React Scripts. **(AI-generated unit-tests are coming)**
 -   `npm run build`: Builds the application for production.
 -   `npm run build:gh`: Builds the application for GitHub Pages deployment.
 -   `npm start`: Starts the production server.
