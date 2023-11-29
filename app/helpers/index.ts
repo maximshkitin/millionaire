@@ -1,2 +1,2 @@
-export * from './checkAnswer';
-export * from './fetchMockData';
+export * from "./checkAnswer";
+export * from "./fetchMockData";

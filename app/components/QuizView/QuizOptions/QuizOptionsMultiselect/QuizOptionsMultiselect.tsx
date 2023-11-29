@@ -1,23 +1,23 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import { AnswerOption } from '@/app/config/types';
-import { QuizOptions } from '../QuizOptions';
-import { QuizButton } from '../../../shared';
+import React, { useState } from "react";
+import { AnswerOption } from "@/app/config/types";
+import { QuizOptions } from "../QuizOptions";
+import { QuizButton } from "../../../shared";
 
-import './QuizOptionsMultiselect.scss';
+import "./QuizOptionsMultiselect.scss";
 
 interface QuizOptionsMultiselectProps {
-  options: AnswerOption[]
-  correctAnswer: string[]
-  handleSubmitAnswer: (selectedOptions: AnswerOption[]) => void
+  options: AnswerOption[];
+  correctAnswer: string[];
+  handleSubmitAnswer: (selectedOptions: AnswerOption[]) => void;
 }
 
-export const QuizOptionsMultiselect: React.FC<QuizOptionsMultiselectProps> = ({
+export function QuizOptionsMultiselect({
   options,
   correctAnswer,
   handleSubmitAnswer,
-}) => {
+}: QuizOptionsMultiselectProps) {
   const [selectedOptions, setSelectedOptions] = useState<AnswerOption[]>([]);
 
   const toggleSelection = (currentSelectionArray: AnswerOption[]) => {
@@ -38,18 +38,22 @@ export const QuizOptionsMultiselect: React.FC<QuizOptionsMultiselectProps> = ({
   const handleSubmitAndResetSelected = () => {
     handleSubmitAnswer(selectedOptions);
     setSelectedOptions([]);
-  }
+  };
 
   return (
-    <div className='QuizOptionsMultiselect'>
-      <QuizOptions 
-        options={options} 
-        currentSelection={selectedOptions} 
+    <div className="QuizOptionsMultiselect">
+      <QuizOptions
+        options={options}
+        currentSelection={selectedOptions}
         correctAnswer={correctAnswer}
-        handleClick={toggleSelection} />
-      <QuizButton handleClick={handleSubmitAndResetSelected} disabled={!selectedOptions.length}>
+        handleClick={toggleSelection}
+      />
+      <QuizButton
+        handleClick={handleSubmitAndResetSelected}
+        disabled={!selectedOptions.length}
+      >
         Answer
       </QuizButton>
     </div>
   );
-};
+}

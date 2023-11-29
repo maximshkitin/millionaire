@@ -1,4 +1,4 @@
-import { AnswerOption } from '@/app/config/types';
+import { AnswerOption } from "@/app/config/types";
 
 // Helper function to check equality of two arrays
 export const checkAnswer = (

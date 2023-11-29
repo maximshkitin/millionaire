@@ -1,35 +1,35 @@
-@import '@/app/styles/_variables';
+@import "@/app/styles/_variables";
 
 .QuizInfoOption {
-    background-color: #fff;
-    border-radius: 15px;
-    border: 1px solid $Black-40;
-    border-color: $Black-40 transparent $Black-40 transparent;
-    font-weight: 400;
-    font-size: 20px;
-    position: relative;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  background-color: #fff;
+  border-radius: 15px;
+  border: 1px solid $Black-40;
+  border-color: $Black-40 transparent $Black-40 transparent;
+  font-weight: 400;
+  font-size: 20px;
+  position: relative;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 
-    &::before,
-    &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        height: 1px;
-        left: -35px;
-        width: 15px;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: $Black-40;
-    }
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 1px;
+    left: -35px;
+    width: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $Black-40;
+  }
 
-    &::after {
-        left: initial;
-        right: -36px;
-    }
+  &::after {
+    left: initial;
+    right: -36px;
+  }
 
-    @media screen and (max-width: $breakpoint-lg) {
-        font-size: 14px;
-    }
+  @media screen and (max-width: $breakpoint-lg) {
+    font-size: 14px;
+  }
 }

@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
 
-@import './_variables';
+@import "./_variables";
 // Normalisation + some custom styles
 
 * {
@@ -14,7 +14,7 @@ body {
   min-height: 100vh;
   padding: 0;
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 32px;
   overflow: hidden;

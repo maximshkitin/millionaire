@@ -1,13 +1,13 @@
-@import '@/app/styles/_variables';
+@import "@/app/styles/_variables";
 
 .QuizIconSidebar {
-    cursor: pointer;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    height: 30px;
-    z-index: map-get($zIndex, hamburgerIcon);
-  
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 30px;
+  z-index: map-get($zIndex, hamburgerIcon);
+
   & .line {
     width: 30px;
     height: 3px;
@@ -23,16 +23,16 @@
 
 .QuizIconClose {
   z-index: map-get($zIndex, closeIcon);
-    & .line {
-        margin: -3px 0;
-        position: relative;
-        top: 20px;
-    
-        &:first-child {
-            transform: rotate(45deg);
-        }
-        &:last-child {
-            transform: rotate(-45deg);
-      }
+  & .line {
+    margin: -3px 0;
+    position: relative;
+    top: 20px;
+
+    &:first-child {
+      transform: rotate(45deg);
     }
+    &:last-child {
+      transform: rotate(-45deg);
+    }
+  }
 }

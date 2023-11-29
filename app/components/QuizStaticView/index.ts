@@ -1,1 +1,1 @@
-export * from './QuizStaticView';
+export * from "./QuizStaticView";

@@ -1,13 +1,13 @@
-@import '@/app/styles/_variables';
+@import "@/app/styles/_variables";
 
 .QuizIconLoading {
-    position: absolute;
-    left: 50%;
-    top: -60px;
-    transform: translateX(-50%);
-    z-index: map-get($zIndex, loading);
+  position: absolute;
+  left: 50%;
+  top: -60px;
+  transform: translateX(-50%);
+  z-index: map-get($zIndex, loading);
 
-    @media screen and (max-width: $breakpoint-md) {
-        top: 0;
-    }
+  @media screen and (max-width: $breakpoint-md) {
+    top: 0;
+  }
 }

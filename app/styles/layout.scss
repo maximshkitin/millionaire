@@ -1,4 +1,4 @@
-@import './_variables';
+@import "./_variables";
 
 .container {
   align-items: center;
@@ -22,7 +22,7 @@
   z-index: $zIndexBase;
 
   @media screen and (max-width: $breakpoint-md) {
-    // substracting 60px to compensate iPhone's Safari tab height 
+    // substracting 60px to compensate iPhone's Safari tab height
     height: calc(100vh - 60px);
   }
 

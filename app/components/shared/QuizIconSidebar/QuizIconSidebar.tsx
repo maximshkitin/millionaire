@@ -1,19 +1,30 @@
-import React, { FC } from "react";
+import React from "react";
 
-import './QuizIconSidebar.scss';
+import "./QuizIconSidebar.scss";
 
 interface QuizIconSidebarProps {
   toggleSidebar: () => void;
-  type: 'hamburger' | 'close';
+  type: "hamburger" | "close";
 }
 
-export const QuizIconSidebar: FC<QuizIconSidebarProps> = ({ toggleSidebar, type }) => (
-  <div
-    className={`QuizIconSidebar ${type === 'close' ? 'QuizIconClose' : 'QuizIconHamburger'}`}
-    onClick={toggleSidebar}
-  >
-    <div className="line"></div>
-    <div className="line"></div>
-    {type === 'hamburger' && <div className="line"></div>}
-  </div>
-);
+export function QuizIconSidebar({ toggleSidebar, type }: QuizIconSidebarProps) {
+  return (
+    <div
+      role="button"
+      tabIndex={0}
+      className={`QuizIconSidebar ${
+        type === "close" ? "QuizIconClose" : "QuizIconHamburger"
+      }`}
+      onClick={toggleSidebar}
+      onKeyDown={(e) => {
+        if (e.key === "Enter") {
+          toggleSidebar();
+        }
+      }}
+    >
+      <div className="line" />
+      <div className="line" />
+      {type === "hamburger" && <div className="line" />}
+    </div>
+  );
+}

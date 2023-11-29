@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import {
   gameOver,
   incrementLevel,
@@ -10,20 +10,18 @@ import {
   useDispatch,
   useSelector,
   updateScore,
-  showAnswerResult
-} from '@/lib/redux';
-import {
-  RootState, AnswerOption, Question, Level,
-} from '@/app/config/types';
-import { checkAnswer, fetchMockData } from '@/app/helpers';
-import { initialQuestionState } from '@/app/config/consts';
-import { QuizView } from '../QuizView';
-import { QuizStaticView } from '../QuizStaticView';
-import { QuizTextBox } from '../shared';
+  showAnswerResult,
+} from "@/lib/redux/index";
+import { RootState, AnswerOption, Question, Level } from "@/app/config/types";
+import { checkAnswer, fetchMockData } from "@/app/helpers";
+import { initialQuestionState } from "@/app/config/consts";
+import { QuizView } from "../QuizView";
+import { QuizStaticView } from "../QuizStaticView";
+import { QuizTextBox } from "../shared";
 
-import './Quiz.scss';
+import "./Quiz.scss";
 
-export const Quiz: React.FC = () => {
+export function Quiz() {
   const dispatch = useDispatch();
 
   const [levels, setLevels] = useState<Level[]>([]);
@@ -31,8 +29,11 @@ export const Quiz: React.FC = () => {
   useEffect(() => {
     const fetchDataAndSetLevels = async () => {
       const mockData = await fetchMockData();
-      mockData && setLevels(mockData);
-    }
+
+      if (mockData) {
+        setLevels(mockData);
+      }
+    };
 
     fetchDataAndSetLevels();
   }, []);
@@ -41,11 +42,13 @@ export const Quiz: React.FC = () => {
     (state: RootState) => state.quiz,
   );
 
-  const isStartScreenClass = isOngoing === null ? 'QuizStartScreenWrapper' : '';
-  const isFinalScreenClass = isOngoing !== null && !isOngoing ? 'QuizFinalScreenWrapper' : '';
+  const isStartScreenClass = isOngoing === null ? "QuizStartScreenWrapper" : "";
+  const isFinalScreenClass =
+    isOngoing !== null && !isOngoing ? "QuizFinalScreenWrapper" : "";
 
-  // '- 1' is needed because level count statrs from '1' 
-  const currentQuestion: Question = levels?.[currentLevel - 1]?.question ?? initialQuestionState;
+  // '- 1' is needed because level count statrs from '1'
+  const currentQuestion: Question =
+    levels?.[currentLevel - 1]?.question ?? initialQuestionState;
 
   const {
     options,
@@ -70,30 +73,28 @@ export const Quiz: React.FC = () => {
   // app flow
   const handleSubmitAnswer = (answer: AnswerOption[]) => {
     dispatch(logAnswer({ question: currentQuestion, answer }));
-    
+
     dispatch(showAnswerResult(answer));
 
     // emulating asyncrosity. this is a delay for showing answer results
     setTimeout(() => {
       if (checkIfCorrect(answer, correctAnswer)) {
+        const currentScoreValue = levels[currentLevel - 1].score;
 
-        const currentScore = levels[currentLevel - 1].score;
-  
         // avoiding '+ 1' because level count statrs from '1' while arrays do from '0'
-        if (levels[currentLevel]?.score) { // next score value.
+        if (levels[currentLevel]?.score) {
+          // next score value.
           dispatch(incrementLevel());
-          dispatch(updateScore(currentScore));
+          dispatch(updateScore(currentScoreValue));
           dispatch(showAnswerResult(null));
         } else {
-          dispatch(updateScore(currentScore));
+          dispatch(updateScore(currentScoreValue));
           dispatch(gameOver());
         }
       } else {
         dispatch(gameOver());
       }
-    }, 2000)
-
-    
+    }, 2000);
   };
 
   return (
@@ -124,8 +125,8 @@ export const Quiz: React.FC = () => {
         </QuizView>
       )}
 
-      {isOngoing !== null
-        && !isOngoing && ( // final screen
+      {isOngoing !== null &&
+        !isOngoing && ( // final screen
           <QuizStaticView
             className="QuizFinalScreen"
             buttonText="Try Again"
@@ -134,13 +135,13 @@ export const Quiz: React.FC = () => {
             <div>
               <QuizTextBox className="QuizSubtitle">Total score:</QuizTextBox>
               <QuizTextBox className="QuizTitle">
-                ${currentScore?.toLocaleString()}
-                {' '}
-                earned
+                ${currentScore?.toLocaleString()} earned
               </QuizTextBox>
             </div>
           </QuizStaticView>
-      )}
+        )}
     </div>
   );
-};
+}
+
+export default Quiz;

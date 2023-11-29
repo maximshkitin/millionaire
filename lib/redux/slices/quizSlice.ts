@@ -1,5 +1,6 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { AnswerOption, QuizState, UserAnswer } from '@/app/config/types';
+/* eslint-disable no-param-reassign */
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { AnswerOption, QuizState, UserAnswer } from "@/app/config/types";
 
 const initialState: QuizState = {
   currentLevel: 1,
@@ -10,7 +11,7 @@ const initialState: QuizState = {
 };
 
 export const quizSlice = createSlice({
-  name: 'quiz',
+  name: "quiz",
   initialState,
   reducers: {
     startQuiz(state) {
@@ -39,7 +40,7 @@ export const quizSlice = createSlice({
     },
     showAnswerResult(state, action: PayloadAction<AnswerOption[] | null>) {
       state.currentAnswer = action.payload;
-    }
+    },
   },
 });
 
@@ -50,5 +51,5 @@ export const {
   updateScore,
   startQuiz,
   resetQuiz,
-  showAnswerResult
+  showAnswerResult,
 } = quizSlice.actions;

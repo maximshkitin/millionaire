@@ -1,41 +1,39 @@
-@import '@/app/styles/_variables';
+@import "@/app/styles/_variables";
 
 .QuizButton {
-    width: 300px;
-    font-size: 20px;
-    font-weight: 600;
-    padding: 20px;
-    background-color: $Orange-100;
-    color: $White;
-    cursor: pointer;
+  width: 300px;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 20px;
+  background-color: $Orange-100;
+  color: $White;
+  cursor: pointer;
 
-    &:hover {
-        background-color: $Orange-80;
-    }
+  &:hover {
+    background-color: $Orange-80;
+  }
 
-    &:focus {
-        background-color: $Orange-120;
-    }
+  &:focus {
+    background-color: $Orange-120;
+  }
 
-    &:disabled {
-        opacity: 0.3;
-        cursor: not-allowed;
-    }
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
 
-    @media screen and (max-width: $breakpoint-lg) {
-        width: 100%;
+  @media screen and (max-width: $breakpoint-lg) {
+    width: 100%;
+  }
 
-        
-    }
+  @media screen and (min-width: 768px) and (max-width: $breakpoint-lg) {
+    font-size: 16px;
+  }
 
-    @media screen and (min-width: 768px) and (max-width: $breakpoint-lg) {
-        font-size: 16px;
-    }
-
-    @media screen and (max-width: $breakpoint-md) {
-        width: 100%;
-        font-size: 14px;
-    }
+  @media screen and (max-width: $breakpoint-md) {
+    width: 100%;
+    font-size: 14px;
+  }
 }
 
 // .a {

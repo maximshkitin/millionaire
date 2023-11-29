@@ -1,6 +1,6 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode } from "react";
 
-import { QuizOptionTriangle } from '../QuizOptionTriangle/QuizOptionTriangle';
+import { QuizOptionTriangle } from "../QuizOptionTriangle/QuizOptionTriangle";
 
 import "./QuizInfoOption.scss";
 
@@ -9,16 +9,17 @@ interface QuizInfoOptionProps {
   children: ReactNode;
 }
 
-export function QuizInfoOption({ className = '', children }: QuizInfoOptionProps) {
+export function QuizInfoOption({
+  className = "",
+  children,
+}: QuizInfoOptionProps) {
   return (
     <div className={`QuizInfoOption ${className}`}>
-
       <QuizOptionTriangle />
-      
+
       {children}
 
       <QuizOptionTriangle isReversed />
-    
     </div>
-  )
+  );
 }

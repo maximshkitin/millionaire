@@ -1,6 +1,6 @@
-import React, { ReactNode, MouseEvent } from 'react';
+import React, { ReactNode, MouseEvent } from "react";
 
-import './QuizButton.scss';
+import "./QuizButton.scss";
 
 interface QuizButtonProps {
   handleClick: (event: MouseEvent<HTMLButtonElement>) => void;
@@ -11,13 +11,18 @@ interface QuizButtonProps {
 
 export function QuizButton({
   handleClick,
-  className = '',
+  className = "",
   children,
-  disabled = false
+  disabled = false,
 }: QuizButtonProps) {
   return (
     <div className="QuizButtonWrapper">
-      <button className={`QuizButton ${className}`} onClick={handleClick} disabled={disabled}>
+      <button
+        type="button"
+        className={`QuizButton ${className}`}
+        onClick={handleClick}
+        disabled={disabled}
+      >
         {children}
       </button>
     </div>

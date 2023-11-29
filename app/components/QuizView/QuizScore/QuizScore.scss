@@ -1,212 +1,208 @@
-@import '@/app/styles/_variables';
+@import "@/app/styles/_variables";
 
 .QuizScoreWrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 25%;
-    overflow: hidden;
-    background-color: $White;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 25%;
+  overflow: hidden;
+  background-color: $White;
+  position: relative;
 
-    @media screen and (max-width: $breakpoint-lg) {
-        width: 100%;
+  @media screen and (max-width: $breakpoint-lg) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: $breakpoint-lg) {
+    transition: transform 0.2s ease-in-out;
+    transform: translateX(100%);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: map-get($zIndex, sidebar);
+
+    &.open {
+      transform: translateX(0);
     }
-
-    @media screen and (max-width: $breakpoint-lg) {
-        transition: transform 0.2s ease-in-out;
-        transform: translateX(100%);
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: map-get($zIndex, sidebar);
-
-        &.open {
-            transform: translateX(0);
-        }
-    }
+  }
 }
 
 .QuizScore {
-    position: relative;
+  position: relative;
+  width: 100%;
+  text-align: center;
+
+  &Item {
     width: 100%;
-    text-align: center;
+    color: $Black-100;
 
-    &Item {
-        width: 100%;
-        color: $Black-100;
-
-        &--Active {
-            color: $Orange-100;
-        }
-
-        &--Inactive {
-            color: $Black-40;
-        }
-
-        &Text {
-            background: $White;
-            position: relative;
-            z-index: map-get($zIndex, quizContent);
-        }
+    &--Active {
+      color: $Orange-100;
     }
 
-    .QuizInfoOption {
-        position: static;
-        display: inline-block;
-        width: 64%;
-        margin: 4px 0;
-        padding: 8px;
-
-        &::before,
-        &::after {
-            width: 18%;
-            top: unset;
-        }
-
-        &::before {
-            left: 0;
-            transform: translateY(11px);
-        }
-        &::after {
-            right: 0;
-            transform: translateY(-12px);
-        }
-
-        @media screen and (max-width: $breakpoint-xl) {
-            width: 76%;
-            
-            &::before,
-            &::after {
-                width: 12%;
-            }
-        }
-
-        @media screen and (max-width: $breakpoint-lg) {
-            &::before {
-                transform: translateY(7.5px);
-            }
-
-            &::after {
-                transform: translateY(-8.5px);
-            }
-        }
-
-        &.QuizScoreItem--Active {
-            border-color: $Orange-100 transparent $Orange-100 transparent;
-            & .QuizOptionTriangleBorder,
-            &::before,
-            &::after {
-                background-color: $Orange-100;
-            }
-        }
-
-        &.QuizScoreItem--Inactive {
-            color: $Black-40;
-        }
-
-        .QuizOptionTriangle {
-            border-width: 18px 20px 18px 0;
-            top: -0.5px;
-            left: -11px;
-            z-index: map-get($zIndex, triangle);
-
-            &Wrapper {
-               top: -6px;
-                bottom: 0;
-                left: -10px; 
-                
-                &.reversed {
-                    left: initial;
-                    right: 0;
-                }
-            }
-            
-            
-    
-
-    
-            &Border {
-                transform: rotate(-42deg);
-                width: 24px;
-                left: -15px;
-
-                z-index: map-get($zIndex, triangle);
-
-                &Top {
-                    top: 9px;
-                }
-
-                &Bottom {
-                    bottom: unset;
-                    top: 25px;
-                    left: -15px;
-                    transform: rotate(-138deg);
-                }
-            }
-
-            @media screen and (max-width: $breakpoint-lg) {
-                top: 2px;
-                left: -7px;
-                border-width: 12px 14px 12px 0;
-
-                &Border {
-                    width: 19px;
-
-                    &Top {
-                        top: 7px;
-                        left: -10px;
-                    }
-
-                    &Bottom {
-                        top: 20px;
-                        left: -10px;
-                    }
-                }
-            }
-        }
-
-        .QuizOptionTriangleWrapper.reversed .QuizOptionTriangle {
-            right: -21px;
-            top: -23.5px;
-
-            &Border {
-                transform: rotate(42deg);
-
-                &Top {
-                    bottom: 13px;
-                    right: -25px;
-                    left: unset;
-                    top: unset;
-                }
-
-                &Bottom {
-                    top: 2px;
-                    right: -25px;
-                    left: unset;
-                    bottom: unset;
-                    transform: rotate(138deg);
-                }
-            }
-
-            @media screen and (max-width: $breakpoint-lg) {
-                right: -17px;
-                top: -14px;
-
-                &Border {
-                    &Top {
-                        bottom: 8px;
-                        right: -20px; 
-                    }
-
-                    &Bottom {
-                        top: 4px;
-                        right: -20px;
-                    }
-                }
-            }
-        }
+    &--Inactive {
+      color: $Black-40;
     }
+
+    &Text {
+      background: $White;
+      position: relative;
+      z-index: map-get($zIndex, quizContent);
+    }
+  }
+
+  .QuizInfoOption {
+    position: static;
+    display: inline-block;
+    width: 64%;
+    margin: 4px 0;
+    padding: 8px;
+
+    &::before,
+    &::after {
+      width: 18%;
+      top: unset;
+    }
+
+    &::before {
+      left: 0;
+      transform: translateY(11px);
+    }
+    &::after {
+      right: 0;
+      transform: translateY(-12px);
+    }
+
+    @media screen and (max-width: $breakpoint-xl) {
+      width: 76%;
+
+      &::before,
+      &::after {
+        width: 12%;
+      }
+    }
+
+    @media screen and (max-width: $breakpoint-lg) {
+      &::before {
+        transform: translateY(7.5px);
+      }
+
+      &::after {
+        transform: translateY(-8.5px);
+      }
+    }
+
+    &.QuizScoreItem--Active {
+      border-color: $Orange-100 transparent $Orange-100 transparent;
+      & .QuizOptionTriangleBorder,
+      &::before,
+      &::after {
+        background-color: $Orange-100;
+      }
+    }
+
+    &.QuizScoreItem--Inactive {
+      color: $Black-40;
+    }
+
+    .QuizOptionTriangle {
+      border-width: 18px 20px 18px 0;
+      top: -0.5px;
+      left: -11px;
+      z-index: map-get($zIndex, triangle);
+
+      &Wrapper {
+        top: -6px;
+        bottom: 0;
+        left: -10px;
+
+        &.reversed {
+          left: initial;
+          right: 0;
+        }
+      }
+
+      &Border {
+        transform: rotate(-42deg);
+        width: 24px;
+        left: -15px;
+
+        z-index: map-get($zIndex, triangle);
+
+        &Top {
+          top: 9px;
+        }
+
+        &Bottom {
+          bottom: unset;
+          top: 25px;
+          left: -15px;
+          transform: rotate(-138deg);
+        }
+      }
+
+      @media screen and (max-width: $breakpoint-lg) {
+        top: 2px;
+        left: -7px;
+        border-width: 12px 14px 12px 0;
+
+        &Border {
+          width: 19px;
+
+          &Top {
+            top: 7px;
+            left: -10px;
+          }
+
+          &Bottom {
+            top: 20px;
+            left: -10px;
+          }
+        }
+      }
+    }
+
+    .QuizOptionTriangleWrapper.reversed .QuizOptionTriangle {
+      right: -21px;
+      top: -23.5px;
+
+      &Border {
+        transform: rotate(42deg);
+
+        &Top {
+          bottom: 13px;
+          right: -25px;
+          left: unset;
+          top: unset;
+        }
+
+        &Bottom {
+          top: 2px;
+          right: -25px;
+          left: unset;
+          bottom: unset;
+          transform: rotate(138deg);
+        }
+      }
+
+      @media screen and (max-width: $breakpoint-lg) {
+        right: -17px;
+        top: -14px;
+
+        &Border {
+          &Top {
+            bottom: 8px;
+            right: -20px;
+          }
+
+          &Bottom {
+            top: 4px;
+            right: -20px;
+          }
+        }
+      }
+    }
+  }
 }

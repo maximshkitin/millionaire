@@ -1,27 +1,31 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import { useMediaQuery } from 'react-responsive';
-import { AnswerOption, QuestionType, QuestionTypeValue } from '@/app/config/types';
-import { QuizScore } from './QuizScore/QuizScore';
-import { QuizOptions, QuizOptionsMultiselect } from './QuizOptions';
-import { QuizIconSidebar } from '../shared';
+import React, { useState } from "react";
+import { useMediaQuery } from "react-responsive";
+import {
+  AnswerOption,
+  QuestionType,
+  QuestionTypeValue,
+} from "@/app/config/types";
+import { QuizScore } from "./QuizScore/QuizScore";
+import { QuizOptions, QuizOptionsMultiselect } from "./QuizOptions";
+import { QuizIconSidebar } from "../shared";
 
-import '../shared/QuizIconSidebar/QuizIconSidebar.scss'
-import './QuizView.scss';
+import "../shared/QuizIconSidebar/QuizIconSidebar.scss";
+import "./QuizView.scss";
 
 interface QuizViewProps {
-  className: string
-  type: QuestionType
-  answerOptions: AnswerOption[]
-  scoreList: number[]
-  correctAnswer: string[]
-  currentLevelIndex: number
-  handleSubmitAnswer: (answer: AnswerOption[]) => void
-  children: React.ReactNode
+  className: string;
+  type: QuestionType;
+  answerOptions: AnswerOption[];
+  scoreList: number[];
+  correctAnswer: string[];
+  currentLevelIndex: number;
+  handleSubmitAnswer: (answer: AnswerOption[]) => void;
+  children: React.ReactNode;
 }
 
-export const QuizView: React.FC<QuizViewProps> = ({
+export function QuizView({
   className,
   type,
   answerOptions,
@@ -29,9 +33,8 @@ export const QuizView: React.FC<QuizViewProps> = ({
   correctAnswer,
   currentLevelIndex,
   handleSubmitAnswer,
-  children
-}) => {
-  
+  children,
+}: QuizViewProps) {
   const [openSidebar, setOpenSidebar] = useState<boolean>(false);
 
   const isMobileOrTablet = useMediaQuery({ maxWidth: 1024 });
@@ -49,12 +52,23 @@ export const QuizView: React.FC<QuizViewProps> = ({
             handleSubmitAnswer={handleSubmitAnswer}
           />
         ) : (
-          <QuizOptions options={answerOptions} correctAnswer={correctAnswer} handleClick={handleSubmitAnswer} />
+          <QuizOptions
+            options={answerOptions}
+            correctAnswer={correctAnswer}
+            handleClick={handleSubmitAnswer}
+          />
         )}
       </div>
-      
-      { isMobileOrTablet && <QuizIconSidebar type={'hamburger'} toggleSidebar={toggleSidebar} /> }
-      <QuizScore open={openSidebar} toggleSidebar={toggleSidebar} scoreList={scoreList} currentLevelIndex={currentLevelIndex} />
+
+      {isMobileOrTablet && (
+        <QuizIconSidebar type="hamburger" toggleSidebar={toggleSidebar} />
+      )}
+      <QuizScore
+        open={openSidebar}
+        toggleSidebar={toggleSidebar}
+        scoreList={scoreList}
+        currentLevelIndex={currentLevelIndex}
+      />
     </div>
-  )
-};
+  );
+}

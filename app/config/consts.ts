@@ -1,9 +1,9 @@
-import { Question, QuestionTypeValue } from './types';
+import { Question, QuestionTypeValue } from "./types";
 
 export const initialQuestionState: Question = {
-  id: '',
+  id: "",
   type: QuestionTypeValue.default,
-  value: '',
+  value: "",
   options: [],
   correctAnswer: [],
 };
