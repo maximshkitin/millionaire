@@ -6,6 +6,7 @@ import {
   AnswerOption,
   QuestionType,
   QuestionTypeValue,
+  QuizIconTypeValue,
 } from "@/app/config/types";
 import { QuizScore } from "./QuizScore/QuizScore";
 import { QuizOptions, QuizOptionsMultiselect } from "./QuizOptions";
@@ -61,7 +62,7 @@ export function QuizView({
       </div>
 
       {isMobileOrTablet && (
-        <QuizIconSidebar type="hamburger" toggleSidebar={toggleSidebar} />
+        <QuizIconSidebar type={QuizIconTypeValue.hamburger} toggleSidebar={toggleSidebar} />
       )}
       <QuizScore
         open={openSidebar}

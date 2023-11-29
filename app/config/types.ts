@@ -3,6 +3,11 @@ export const QuestionTypeValue = {
   multiselect: "multiselect",
 } as const;
 
+export const QuizIconTypeValue = {
+  hamburger: "hamburger",
+  close: "close",
+} as const;
+
 export interface AnswerOption {
   id: string;
   value: string;

@@ -5,6 +5,7 @@ import { QuizIconSidebar, QuizInfoOption } from "../../shared";
 
 import "../../shared/QuizIconSidebar/QuizIconSidebar.scss";
 import "./QuizScore.scss";
+import { QuizIconTypeValue } from "@/app/config/types";
 
 interface QuizScoreProps {
   scoreList?: number[];
@@ -54,7 +55,7 @@ export function QuizScore({
           ))}
       </div>
       {isMobileOrTablet && (
-        <QuizIconSidebar type="close" toggleSidebar={toggleSidebar} />
+        <QuizIconSidebar type={QuizIconTypeValue.close} toggleSidebar={toggleSidebar} />
       )}
     </div>
   );
