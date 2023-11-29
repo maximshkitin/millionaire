@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
 
-@import "./_variables";
+@import "./variables";
 // Normalisation + some custom styles
 
 * {
@@ -41,7 +41,7 @@ hr {
 
 pre {
   display: block;
-  font-family: monospace, monospace;
+  font-family: monospace;
   font-size: 1em;
 }
 
@@ -55,19 +55,13 @@ fieldset {
   border: 1px solid #a7a7a7;
 }
 
-textarea {
-  overflow: auto;
-}
-
 legend {
+  padding: 0;
   color: inherit;
   display: table;
   max-width: 100%;
   white-space: normal;
-}
-
-progress {
-  display: inline-block;
+  box-sizing: border-box;
 }
 
 menu {
@@ -142,20 +136,8 @@ button:-moz-focusring,
   outline: 1px dotted;
 }
 
-fieldset {
-  padding: 0.05em 0.75em 0.2em;
-}
-
-legend {
-  box-sizing: border-box;
-  color: inherit;
-  display: table;
-  max-width: 100%;
-  padding: 0;
-  white-space: normal;
-}
-
 progress {
+  display: inline-block;
   vertical-align: baseline;
 }
 
