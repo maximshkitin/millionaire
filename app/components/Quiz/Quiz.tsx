@@ -94,7 +94,7 @@ export function Quiz() {
       } else {
         dispatch(gameOver());
       }
-    }, 2000);
+    }, 1000);
   };
 
   return (
