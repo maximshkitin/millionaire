@@ -48,17 +48,5 @@
     "stylelint-config-recommended-scss": "^13.1.0",
     "stylelint-scss": "^5.3.1",
     "typescript": "^5.3.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "npm run prepush"
-    }
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx,md}": [
-      "npm run lint:fix",
-      "npm run lint:styles"
-    ]
   }
 }
