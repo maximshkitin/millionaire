@@ -1,5 +1,5 @@
 import React, { ReactNode, MouseEvent } from "react";
-import { QuizButton, QuizIcon } from "../shared";
+import { QuizButton, QuizIcon } from "../../shared";
 
 import "./QuizStaticView.scss";
 

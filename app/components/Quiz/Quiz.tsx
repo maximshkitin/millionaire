@@ -15,8 +15,8 @@ import {
 import { RootState, AnswerOption, Question, Level } from "@/app/config/types";
 import { checkAnswer, fetchMockData } from "@/app/helpers";
 import { initialQuestionState } from "@/app/config/consts";
-import { QuizView } from "../QuizView";
-import { QuizStaticView } from "../QuizStaticView";
+import { QuizView } from "./QuizView";
+import { QuizStaticView } from "./QuizStaticView";
 import { QuizTextBox } from "../shared";
 
 import "./Quiz.scss";

@@ -2,6 +2,8 @@
 
 @import "@/app/styles/variables";
 
+@import "../../../shared/QuizIconSidebar/QuizIconSidebar";
+
 .QuizScoreWrapper {
   display: flex;
   flex-direction: column;
@@ -96,7 +98,7 @@
       }
     }
 
-    .QuizOptionTriangle {
+    .QuizInfoOptionTriangle {
       border-width: 18px 20px 18px 0;
       top: -0.5px;
       left: -11px;
@@ -155,7 +157,7 @@
 
     &.QuizScoreItem--Active {
       border-color: $Orange-100 transparent $Orange-100 transparent;
-      & .QuizOptionTriangleBorder,
+      & .QuizInfoOptionTriangleBorder,
       &::before,
       &::after {
         background-color: $Orange-100;
@@ -166,7 +168,7 @@
       color: $Black-40;
     }
 
-    .QuizOptionTriangleWrapper.reversed .QuizOptionTriangle {
+    .QuizInfoOptionTriangleWrapper.reversed .QuizInfoOptionTriangle {
       right: -21px;
       top: -23.5px;
 

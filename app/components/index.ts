@@ -1,3 +1,3 @@
 export * from "./Quiz";
-export * from "./QuizView";
-export * from "./QuizStaticView";
+export * from "./Quiz/QuizView";
+export * from "./Quiz/QuizStaticView";

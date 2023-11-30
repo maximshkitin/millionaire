@@ -10,9 +10,8 @@ import {
 } from "@/app/config/types";
 import { QuizScore } from "./QuizScore/QuizScore";
 import { QuizOptions, QuizOptionsMultiselect } from "./QuizOptions";
-import { QuizIconSidebar } from "../shared";
+import { QuizIconSidebar } from "../../shared";
 
-import "../shared/QuizIconSidebar/QuizIconSidebar.scss";
 import "./QuizView.scss";
 
 interface QuizViewProps {

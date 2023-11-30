@@ -1,6 +1,6 @@
 @import "@/app/styles/variables";
 
-.QuizOptionTriangleWrapper {
+.QuizInfoOptionTriangleWrapper {
   position: relative;
   top: -21px;
   bottom: 0;
@@ -24,7 +24,7 @@
   }
 }
 
-.QuizOptionTriangle {
+.QuizInfoOptionTriangle {
   width: 0px;
   height: 0px;
   position: absolute;
@@ -58,14 +58,14 @@
   }
 }
 
-.QuizInfoOption .QuizOptionTriangle.reverse {
+.QuizInfoOption .QuizInfoOptionTriangle.reverse {
   transform: rotate(180deg);
   left: unset;
   right: -13px;
 }
 
-.QuizInfoOption .QuizOptionTriangleWrapper.reversed {
-  & .QuizOptionTriangle {
+.QuizInfoOption .QuizInfoOptionTriangleWrapper.reversed {
+  & .QuizInfoOptionTriangle {
     transform: rotate(180deg);
     left: unset;
     right: -37px;

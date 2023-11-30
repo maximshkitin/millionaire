@@ -1,9 +1,8 @@
 import React from "react";
 import { useMediaQuery } from "react-responsive";
 
-import { QuizIconSidebar, QuizInfoOption } from "../../shared";
+import { QuizIconSidebar, QuizInfoOption } from "../../../shared";
 
-import "../../shared/QuizIconSidebar/QuizIconSidebar.scss";
 import "./QuizScore.scss";
 import { QuizIconTypeValue } from "@/app/config/types";
 

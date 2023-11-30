@@ -77,30 +77,31 @@ In the project directory, you can run the following scripts:
 ├── Quiz
 │   ├── Quiz.scss
 │   ├── Quiz.test.tsx
-│   └── Quiz.tsx
-├── QuizStaticView
-│   ├── QuizStaticView.scss
-│   ├── QuizStaticView.test.tsx
-│   ├── QuizStaticView.tsx
-│   └── index.ts
-├── QuizView
-│   ├── QuizOptions
-│   │   ├── QuizOptions.scss
-│   │   ├── QuizOptions.test.tsx
-│   │   ├── QuizOptions.tsx
-│   │   ├── QuizOptionsMultiselect
-│   │   │   ├── QuizOptionsMultiselect.scss
-│   │   │   ├── QuizOptionsMultiselect.test.tsx
-│   │   │   └── QuizOptionsMultiselect.tsx
+│   ├── Quiz.tsx
+│   ├── QuizStaticView
+│   │   ├── QuizStaticView.scss
+│   │   ├── QuizStaticView.test.tsx
+│   │   ├── QuizStaticView.tsx
 │   │   └── index.ts
-│   ├── QuizScore
-│   │   ├── QuizScore.scss
-│   │   ├── QuizScore.test.tsx
-│   │   ├── QuizScore.tsx
+│   ├── QuizView
+│   │   ├── QuizOptions
+│   │   │   ├── QuizOptions.scss
+│   │   │   ├── QuizOptions.test.tsx
+│   │   │   ├── QuizOptions.tsx
+│   │   │   ├── QuizOptionsMultiselect
+│   │   │   │   ├── QuizOptionsMultiselect.scss
+│   │   │   │   ├── QuizOptionsMultiselect.test.tsx
+│   │   │   │   └── QuizOptionsMultiselect.tsx
+│   │   │   └── index.ts
+│   │   ├── QuizScore
+│   │   │   ├── QuizScore.scss
+│   │   │   ├── QuizScore.test.tsx
+│   │   │   ├── QuizScore.tsx
+│   │   │   └── index.ts
+│   │   ├── QuizView.scss
+│   │   ├── QuizView.test.tsx
+│   │   ├── QuizView.tsx
 │   │   └── index.ts
-│   ├── QuizView.scss
-│   ├── QuizView.test.tsx
-│   ├── QuizView.tsx
 │   └── index.ts
 ├── index.ts
 └── shared
@@ -123,11 +124,11 @@ In the project directory, you can run the following scripts:
     ├── QuizInfoOption
     │   ├── QuizInfoOption.scss
     │   ├── QuizInfoOption.test.tsx
-    │   └── QuizInfoOption.tsx
-    ├── QuizOptionTriangle
-    │   ├── QuizOptionTriangle.scss
-    │   ├── QuizOptionTriangle.test.tsx
-    │   └── QuizOptionTriangle.tsx
+    │   ├── QuizInfoOption.tsx
+    │   └── QuizInfoOptionTriangle
+    │       ├── QuizInfoOptionTriangle.scss
+    │       ├── QuizInfoOptionTriangle.test.tsx
+    │       └── QuizInfoOptionTriangle.tsx
     ├── QuizTextBox
     │   ├── QuizTextBox.scss
     │   ├── QuizTextBox.test.tsx

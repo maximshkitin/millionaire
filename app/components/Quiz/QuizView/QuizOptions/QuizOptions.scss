@@ -62,7 +62,7 @@
       &:hover {
         border-color: $QuizOptionBorderColorHover;
 
-        & .QuizOptionTriangleBorder,
+        & .QuizInfoOptionTriangleBorder,
         &::before,
         &::after {
           background-color: $Orange-100;
@@ -79,7 +79,7 @@
         }
       }
 
-      & .QuizOptionTriangle {
+      & .QuizInfoOptionTriangle {
         @media screen and (max-width: $breakpoint-lg) {
           top: 7px;
           left: 6px;
@@ -102,8 +102,8 @@
         }
       }
 
-      & .QuizOptionTriangleWrapper.reversed {
-        & .QuizOptionTriangle {
+      & .QuizInfoOptionTriangleWrapper.reversed {
+        & .QuizInfoOptionTriangle {
           @media screen and (max-width: $breakpoint-lg) {
             right: -32px;
             top: -9px;
@@ -129,13 +129,13 @@
         background-color: $Orange-10;
         border-color: $QuizOptionBorderColorHover;
 
-        & .QuizOptionTriangleBorder,
+        & .QuizInfoOptionTriangleBorder,
         &::before,
         &::after {
           background-color: $Orange-100;
         }
 
-        & .QuizOptionTriangleWrapper .QuizOptionTriangle {
+        & .QuizInfoOptionTriangleWrapper .QuizInfoOptionTriangle {
           border-right-color: $Orange-10;
         }
       }
@@ -146,13 +146,13 @@
         background-color: $Green-40;
         border-color: $QuizOptionBorderColorCorrect;
 
-        & .QuizOptionTriangleBorder,
+        & .QuizInfoOptionTriangleBorder,
         &::before,
         &::after {
           background-color: $Green-100;
         }
 
-        & .QuizOptionTriangleWrapper .QuizOptionTriangle {
+        & .QuizInfoOptionTriangleWrapper .QuizInfoOptionTriangle {
           border-right-color: $Green-40;
         }
       }
@@ -163,13 +163,13 @@
         background-color: $Red-5;
         border-color: $QuizOptionBorderColorIncorrect;
 
-        & .QuizOptionTriangleBorder,
+        & .QuizInfoOptionTriangleBorder,
         &::before,
         &::after {
           background-color: $Red-100;
         }
 
-        & .QuizOptionTriangleWrapper .QuizOptionTriangle {
+        & .QuizInfoOptionTriangleWrapper .QuizInfoOptionTriangle {
           border-right-color: $Red-5;
         }
       }
