@@ -39,21 +39,6 @@
   justify-content: center;
 }
 
-.footer {
-  grid-area: footer;
-  justify-self: center;
-}
-
-.nav {
-  grid-area: nav;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 8px;
-  font-size: calc(10px + 2vmin);
-}
-
 .link {
   color: #704cb6;
 }

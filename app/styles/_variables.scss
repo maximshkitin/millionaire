@@ -33,7 +33,6 @@ $zIndex: (
   hamburgerIcon: $zIndexBase + 40,
   sidebar: $zIndexBase + 50,
   loading: $zIndexBase + 60,
-  footer: $zIndexBase + 70,
 );
 
 $zIndexMax: $zIndexBase + 100;
@@ -43,16 +42,6 @@ $breakpoint-sm: 575px;
 $breakpoint-md: 767px;
 $breakpoint-lg: 991px;
 $breakpoint-xl: 1279px;
-
-// Media queries using variables
-// $media-xs: "only screen and (max-width: #{($breakpoint-sm - 1)})";
-// $media-sm: "only screen and (min-width: #{$breakpoint-sm}) and (max-width: #{($breakpoint-md - 1)})";
-// $media-md: "only screen and (min-width: #{$breakpoint-md}) and (max-width: #{($breakpoint-lg - 1)})";
-// $media-lg: "only screen and (min-width: #{$breakpoint-lg}) and (max-width: #{($breakpoint-xl - 1)})";
-// $media-xl: "only screen and (min-width: #{$breakpoint-xl})";
-
-// $media-mobiles: "only screen and (max-width: #{$breakpoint-md - 1})";
-// $media-mobile-landscape: "only screen and (max-width: #{($breakpoint-md - 1)}) and (orientation: landscape)";
 
 // Components
 $QuizOptionBorderColor: $Black-40 transparent $Black-40 transparent;

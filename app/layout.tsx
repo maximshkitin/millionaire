@@ -12,8 +12,6 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
       <html lang="en">
         <body>
           <section className="container">
-            {/* <Nav /> */}
-
             <main className="main">{children}</main>
           </section>
         </body>
