@@ -108,20 +108,20 @@ In the project directory, you can run the following scripts:
     │   ├── QuizIcon.test.tsx
     │   └── QuizIcon.tsx
     ├── QuizIconLoading
-    │   ├── QuizIcon.test.tsx
     │   ├── QuizIconLoading.scss
+    │   ├── QuizIconLoading.test.tsx
     │   └── QuizIconLoading.tsx
     ├── QuizIconSidebar
-    │   ├── QuizIcon.test.tsx
     │   ├── QuizIconSidebar.scss
+    │   ├── QuizIconSidebar.test.tsx
     │   └── QuizIconSidebar.tsx
     ├── QuizInfoOption
-    │   ├── QuizIcon.test.tsx
     │   ├── QuizInfoOption.scss
+    │   ├── QuizInfoOption.test.tsx
     │   └── QuizInfoOption.tsx
     ├── QuizOptionTriangle
-    │   ├── QuizIcon.test.tsx
     │   ├── QuizOptionTriangle.scss
+    │   ├── QuizOptionTriangle.test.tsx
     │   └── QuizOptionTriangle.tsx
     ├── QuizTextBox
     │   ├── QuizTextBox.scss
