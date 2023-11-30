@@ -37,15 +37,20 @@ You may wanna use [`nvm`](https://github.com/nvm-sh/nvm) to change Node version.
     npm install
     ```
 
+### Bootstrapping 🚀
+
+```bash
+npm start
+```
+
 ## Available Scripts
 
 In the project directory, you can run the following scripts:
 
-- `npm run dev`: Runs the development server using Next.js.
-- `npm test`: Runs tests using React Scripts. **(AI-generated unit-tests are coming)**
+- `npm start`: Runs the development server using Next.js.
+- `npm test`: Runs tests using React Scripts. **(AI-generated unit-tests are coming soon)**
 - `npm run build`: Builds the application for production.
 - `npm run build:gh`: Builds the application for GitHub Pages deployment.
-- `npm start`: Starts the production server.
 - `npm run deploy`: Builds the application for GitHub Pages and deploys it.
 - `npm run lint`: Lints TypeScript files in the `app` directory.
 - `npm run lint:fix`: Fixes linting issues in TypeScript files.

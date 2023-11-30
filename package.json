@@ -6,11 +6,10 @@
     "npm": "9.x"
   },
   "scripts": {
-    "dev": "next",
     "test": "react-scripts test",
     "build": "next build",
     "build:gh": "cross-env GITHUB_PAGES=true next build",
-    "start": "next start",
+    "start": "next",
     "deploy": "npm run build:gh && touch ./out/.nojekyll && gh-pages -d out -t true",
     "lint": "eslint app/**/*.{ts,tsx}",
     "lint:fix": "eslint --fix app/**/*.{ts,tsx}",
