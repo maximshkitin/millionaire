@@ -62,7 +62,10 @@ export function QuizView({
       </div>
 
       {isMobileOrTablet && (
-        <QuizIconSidebar type={QuizIconTypeValue.hamburger} toggleSidebar={toggleSidebar} />
+        <QuizIconSidebar
+          type={QuizIconTypeValue.hamburger}
+          toggleSidebar={toggleSidebar}
+        />
       )}
       <QuizScore
         open={openSidebar}

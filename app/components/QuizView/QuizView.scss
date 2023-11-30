@@ -1,4 +1,6 @@
-@import "@/app/styles/_variables";
+@use "sass:map";
+
+@import "@/app/styles/variables";
 
 .QuizContent {
   display: flex;
@@ -6,7 +8,7 @@
   justify-content: space-between;
   padding: 120px 80px;
   position: relative;
-  z-index: map-get($zIndex, quizContent);
+  z-index: map.get($zIndex, quizContent);
   width: 75%;
 
   @media screen and (max-width: $breakpoint-lg) {

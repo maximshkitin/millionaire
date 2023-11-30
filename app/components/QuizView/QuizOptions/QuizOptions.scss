@@ -1,4 +1,6 @@
-@import "@/app/styles/_variables";
+@use "sass:map";
+
+@import "@/app/styles/variables";
 
 .Quiz {
   position: relative;
@@ -38,7 +40,7 @@
       color: $Orange-100;
       margin-right: 10px;
       position: relative;
-      z-index: map-get($zIndex, quizContent);
+      z-index: map.get($zIndex, quizContent);
     }
 
     @media screen and (max-width: $breakpoint-md) {
@@ -122,9 +124,7 @@
       }
     }
 
-    &.selected,
-    &.correct.selected,
-    &.incorrect.selected {
+    &.selected {
       .QuizInfoOption {
         background-color: $Orange-10;
         border-color: $QuizOptionBorderColorHover;
@@ -135,14 +135,13 @@
           background-color: $Orange-100;
         }
 
-        & .QuizOptionTriangle {
+        & .QuizOptionTriangleWrapper .QuizOptionTriangle {
           border-right-color: $Orange-10;
         }
       }
     }
 
-    &.correct,
-    &.correct.selected {
+    &.correct {
       .QuizInfoOption {
         background-color: $Green-40;
         border-color: $QuizOptionBorderColorCorrect;
@@ -153,14 +152,13 @@
           background-color: $Green-100;
         }
 
-        & .QuizOptionTriangle {
+        & .QuizOptionTriangleWrapper .QuizOptionTriangle {
           border-right-color: $Green-40;
         }
       }
     }
 
-    &.incorrect,
-    &.incorrect.selected {
+    &.incorrect {
       .QuizInfoOption {
         background-color: $Red-5;
         border-color: $QuizOptionBorderColorIncorrect;
@@ -171,7 +169,7 @@
           background-color: $Red-100;
         }
 
-        & .QuizOptionTriangle {
+        & .QuizOptionTriangleWrapper .QuizOptionTriangle {
           border-right-color: $Red-5;
         }
       }

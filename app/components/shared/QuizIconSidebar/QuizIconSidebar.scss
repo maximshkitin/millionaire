@@ -1,4 +1,6 @@
-@import "@/app/styles/_variables";
+@use "sass:map";
+
+@import "@/app/styles/variables";
 
 .QuizIconSidebar {
   cursor: pointer;
@@ -6,7 +8,7 @@
   top: 20px;
   right: 20px;
   height: 30px;
-  z-index: map-get($zIndex, hamburgerIcon);
+  z-index: map.get($zIndex, hamburgerIcon);
 
   & .line {
     width: 30px;
@@ -22,7 +24,7 @@
 }
 
 .QuizIconClose {
-  z-index: map-get($zIndex, closeIcon);
+  z-index: map.get($zIndex, closeIcon);
   & .line {
     margin: -3px 0;
     position: relative;

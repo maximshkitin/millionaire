@@ -14,7 +14,7 @@
     "deploy": "npm run build:gh && touch ./out/.nojekyll && gh-pages -d out -t true",
     "lint": "eslint app/**/*.{ts,tsx}",
     "lint:fix": "eslint --fix app/**/*.{ts,tsx}",
-    "lint:styles": "stylelint --fix  */styles/**/*.scss ",
+    "lint:styles": "stylelint --fix  **/*.scss",
     "format": "prettier --write .",
     "prepare": "husky install && chmod +x .husky/*",
     "prepush": "npm run lint"

@@ -195,5 +195,4 @@ const levels: Level[] = [
   },
 ];
 
-
 export default levels;

@@ -18,7 +18,7 @@ module.exports = {
       "error",
       { ignoreFunctionalComponents: true },
     ],
-    "no-console": ["error", { "allow": ["error"] }]
+    "no-console": ["error", { allow: ["error"] }],
   },
   ignorePatterns: ["**/*.scss"],
   parserOptions: {

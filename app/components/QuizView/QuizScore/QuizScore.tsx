@@ -55,7 +55,10 @@ export function QuizScore({
           ))}
       </div>
       {isMobileOrTablet && (
-        <QuizIconSidebar type={QuizIconTypeValue.close} toggleSidebar={toggleSidebar} />
+        <QuizIconSidebar
+          type={QuizIconTypeValue.close}
+          toggleSidebar={toggleSidebar}
+        />
       )}
     </div>
   );
