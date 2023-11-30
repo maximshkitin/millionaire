@@ -14,7 +14,11 @@ import {
 } from "@/lib/redux/index";
 import { RootState, AnswerOption, Question, Level } from "@/app/config/types";
 import { checkAnswer, fetchMockData } from "@/app/helpers";
-import { initialQuestionState } from "@/app/config/consts";
+import {
+  buttonText,
+  initialQuestionState,
+  staticScreenTitle,
+} from "@/app/config/consts";
 import { QuizView } from "./QuizView";
 import { QuizStaticView } from "./QuizStaticView";
 import { QuizTextBox } from "../shared";
@@ -62,7 +66,8 @@ export function Quiz() {
 
   useEffect(() => {
     setShuffledAnswerOptions(
-      options.slice() // to keep the original array unchanged
+      options
+        .slice() // to keep the original array unchanged
         .sort(() => Math.random() - 0.5), // shuffle array!
     );
   }, [options, isOngoing]); // added isOngoing dependency to run setter on "Try Again" case
@@ -112,11 +117,11 @@ export function Quiz() {
       {isOngoing === null && ( // intro screen
         <QuizStaticView
           className="QuizStartScreen"
-          buttonText="Start"
+          buttonText={buttonText.start}
           handleClick={handleStart}
         >
           <QuizTextBox className="QuizTitle">
-            Who wants to be a millionaire?
+            {staticScreenTitle.main}
           </QuizTextBox>
         </QuizStaticView>
       )}
@@ -139,13 +144,15 @@ export function Quiz() {
         !isOngoing && ( // final screen
           <QuizStaticView
             className="QuizFinalScreen"
-            buttonText="Try Again"
+            buttonText={buttonText.again}
             handleClick={handleReset}
           >
             <div>
-              <QuizTextBox className="QuizSubtitle">Total score:</QuizTextBox>
+              <QuizTextBox className="QuizSubtitle">
+                {staticScreenTitle.totalScore}
+              </QuizTextBox>
               <QuizTextBox className="QuizTitle">
-                ${currentScore?.toLocaleString()} earned
+                ${currentScore?.toLocaleString()} {staticScreenTitle.earned}
               </QuizTextBox>
             </div>
           </QuizStaticView>

@@ -5,6 +5,8 @@ import { AnswerOption } from "@/app/config/types";
 import { QuizOptions } from "../QuizOptions";
 import { QuizButton } from "../../../../shared";
 
+import { buttonText } from "@/app/config/consts";
+
 import "./QuizOptionsMultiselect.scss";
 
 interface QuizOptionsMultiselectProps {
@@ -52,7 +54,7 @@ export function QuizOptionsMultiselect({
         handleClick={handleSubmitAndResetSelected}
         disabled={!selectedOptions.length}
       >
-        Answer
+        {buttonText.answer}
       </QuizButton>
     </div>
   );

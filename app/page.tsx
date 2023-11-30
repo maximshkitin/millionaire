@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Quiz } from "./components/Quiz/Quiz";
+import { Quiz } from "./components/Quiz";
 
 export default function IndexPage() {
   return <Quiz />;
