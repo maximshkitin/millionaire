@@ -121,14 +121,14 @@ In the project directory, you can run the following scripts:
     │   ├── QuizIconSidebar.scss
     │   ├── QuizIconSidebar.test.tsx
     │   └── QuizIconSidebar.tsx
-    ├── QuizInfoOption
-    │   ├── QuizInfoOption.scss
-    │   ├── QuizInfoOption.test.tsx
-    │   ├── QuizInfoOption.tsx
-    │   └── QuizInfoOptionTriangle
-    │       ├── QuizInfoOptionTriangle.scss
-    │       ├── QuizInfoOptionTriangle.test.tsx
-    │       └── QuizInfoOptionTriangle.tsx
+    ├── QuizInfoBadge
+    │   ├── QuizInfoBadge.scss
+    │   ├── QuizInfoBadge.test.tsx
+    │   ├── QuizInfoBadge.tsx
+    │   └── QuizInfoBadgeTriangle
+    │       ├── QuizInfoBadgeTriangle.scss
+    │       ├── QuizInfoBadgeTriangle.test.tsx
+    │       └── QuizInfoBadgeTriangle.tsx
     ├── QuizTextBox
     │   ├── QuizTextBox.scss
     │   ├── QuizTextBox.test.tsx

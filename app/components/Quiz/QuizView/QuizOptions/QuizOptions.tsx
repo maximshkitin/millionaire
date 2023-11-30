@@ -3,7 +3,7 @@
 import React from "react";
 import { useSelector } from "@/lib/redux";
 
-import { QuizIconLoading, QuizInfoOption } from "../../../shared";
+import { QuizIconLoading, QuizInfoBadge } from "../../../shared";
 
 import { AnswerOption, RootState } from "@/app/config/types";
 import { generateAlphabet } from "@/app/helpers/generateAlphabet";
@@ -82,12 +82,12 @@ export function QuizOptions({
             }
           }}
         >
-          <QuizInfoOption>
+          <QuizInfoBadge>
             <span className="QuizOptionPrefix">
               {generateAlphabet()[index]}
             </span>
             {option.value}
-          </QuizInfoOption>
+          </QuizInfoBadge>
         </div>
       ))}
     </div>

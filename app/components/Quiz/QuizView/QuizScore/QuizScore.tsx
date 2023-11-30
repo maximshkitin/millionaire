@@ -1,7 +1,7 @@
 import React from "react";
 import { useMediaQuery } from "react-responsive";
 
-import { QuizIconSidebar, QuizInfoOption } from "../../../shared";
+import { QuizIconSidebar, QuizInfoBadge } from "../../../shared";
 
 import "./QuizScore.scss";
 import { QuizIconTypeValue } from "@/app/config/types";
@@ -40,7 +40,7 @@ export function QuizScore({
           ?.slice()
           .reverse()
           .map((score) => (
-            <QuizInfoOption
+            <QuizInfoBadge
               key={score}
               className={getScoreItemClassName(
                 score,
@@ -50,7 +50,7 @@ export function QuizScore({
               <div className="QuizScoreItemText">
                 ${score?.toLocaleString()}
               </div>
-            </QuizInfoOption>
+            </QuizInfoBadge>
           ))}
       </div>
       {isMobileOrTablet && (

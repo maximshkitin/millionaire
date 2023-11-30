@@ -48,7 +48,7 @@
       margin-top: 8px;
     }
 
-    .QuizInfoOption {
+    .QuizInfoBadge {
       background-color: #fff;
       width: 100%;
       padding: 24px 15px;
@@ -62,7 +62,7 @@
       &:hover {
         border-color: $QuizOptionBorderColorHover;
 
-        & .QuizInfoOptionTriangleBorder,
+        & .QuizInfoBadgeTriangleBorder,
         &::before,
         &::after {
           background-color: $Orange-100;
@@ -79,7 +79,7 @@
         }
       }
 
-      & .QuizInfoOptionTriangle {
+      & .QuizInfoBadgeTriangle {
         @media screen and (max-width: $breakpoint-lg) {
           top: 7px;
           left: 6px;
@@ -102,8 +102,8 @@
         }
       }
 
-      & .QuizInfoOptionTriangleWrapper.reversed {
-        & .QuizInfoOptionTriangle {
+      & .QuizInfoBadgeTriangleWrapper.reversed {
+        & .QuizInfoBadgeTriangle {
           @media screen and (max-width: $breakpoint-lg) {
             right: -32px;
             top: -9px;
@@ -125,51 +125,51 @@
     }
 
     &.selected {
-      .QuizInfoOption {
+      .QuizInfoBadge {
         background-color: $Orange-10;
         border-color: $QuizOptionBorderColorHover;
 
-        & .QuizInfoOptionTriangleBorder,
+        & .QuizInfoBadgeTriangleBorder,
         &::before,
         &::after {
           background-color: $Orange-100;
         }
 
-        & .QuizInfoOptionTriangleWrapper .QuizInfoOptionTriangle {
+        & .QuizInfoBadgeTriangleWrapper .QuizInfoBadgeTriangle {
           border-right-color: $Orange-10;
         }
       }
     }
 
     &.correct {
-      .QuizInfoOption {
+      .QuizInfoBadge {
         background-color: $Green-40;
         border-color: $QuizOptionBorderColorCorrect;
 
-        & .QuizInfoOptionTriangleBorder,
+        & .QuizInfoBadgeTriangleBorder,
         &::before,
         &::after {
           background-color: $Green-100;
         }
 
-        & .QuizInfoOptionTriangleWrapper .QuizInfoOptionTriangle {
+        & .QuizInfoBadgeTriangleWrapper .QuizInfoBadgeTriangle {
           border-right-color: $Green-40;
         }
       }
     }
 
     &.incorrect {
-      .QuizInfoOption {
+      .QuizInfoBadge {
         background-color: $Red-5;
         border-color: $QuizOptionBorderColorIncorrect;
 
-        & .QuizInfoOptionTriangleBorder,
+        & .QuizInfoBadgeTriangleBorder,
         &::before,
         &::after {
           background-color: $Red-100;
         }
 
-        & .QuizInfoOptionTriangleWrapper .QuizInfoOptionTriangle {
+        & .QuizInfoBadgeTriangleWrapper .QuizInfoBadgeTriangle {
           border-right-color: $Red-5;
         }
       }
