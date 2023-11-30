@@ -70,6 +70,38 @@ In the project directory, you can run the following scripts:
 - `package.json`: Node.js package manager configuration file.
 - `README.md`: Project documentation.
 
+## Dependencies
+
+- `@reduxjs/toolkit`: State management library.
+- `next`: React framework for server-rendered applications.
+- `react`: JavaScript library for building user interfaces.
+- `react-dom`: Entry point for DOM-specific rendering.
+- `react-redux`: Official React bindings for Redux.
+- `react-responsive`: Media queries in React for responsive design.
+- `react-spinners`: Loading spinners for React applications.
+
+## Development Dependencies
+
+- `@types/node`: TypeScript definitions for Node.js.
+- `@types/react`: TypeScript definitions for React.
+- `@types/react-dom`: TypeScript definitions for React DOM.
+- `cross-env`: Cross-environment variable setting.
+- `eslint`: Linting utility for JavaScript and TypeScript.
+- `eslint-config-airbnb`: Airbnb's ESLint configuration.
+- `eslint-config-airbnb-typescript`: Airbnb's ESLint configuration for TypeScript.
+- `eslint-config-prettier`: Turns off ESLint rules that conflict with Prettier.
+- `eslint-config-standard`: JavaScript Standard Style ESLint configuration.
+- `gh-pages`: GitHub Pages deployment utility.
+- `husky`: Git hooks made easy.
+- `lint-staged`: Run linters on pre-committed files.
+- `prettier`: Opinionated code formatter.
+- `sass`: CSS extension language.
+- `stylelint`: Linting utility for styles.
+- `stylelint-config-recommended`: Recommended stylelint configuration.
+- `stylelint-config-recommended-scss`: Recommended stylelint configuration for SCSS.
+- `stylelint-scss`: SCSS specific linting rules.
+- `typescript`: Typed superset of JavaScript.
+
 ## Components Structure
 
 ```
@@ -136,37 +168,6 @@ In the project directory, you can run the following scripts:
     └── index.ts
 ```
 
-## Dependencies
-
-- `@reduxjs/toolkit`: State management library.
-- `next`: React framework for server-rendered applications.
-- `react`: JavaScript library for building user interfaces.
-- `react-dom`: Entry point for DOM-specific rendering.
-- `react-redux`: Official React bindings for Redux.
-- `react-responsive`: Media queries in React for responsive design.
-- `react-spinners`: Loading spinners for React applications.
-
-## Development Dependencies
-
-- `@types/node`: TypeScript definitions for Node.js.
-- `@types/react`: TypeScript definitions for React.
-- `@types/react-dom`: TypeScript definitions for React DOM.
-- `cross-env`: Cross-environment variable setting.
-- `eslint`: Linting utility for JavaScript and TypeScript.
-- `eslint-config-airbnb`: Airbnb's ESLint configuration.
-- `eslint-config-airbnb-typescript`: Airbnb's ESLint configuration for TypeScript.
-- `eslint-config-prettier`: Turns off ESLint rules that conflict with Prettier.
-- `eslint-config-standard`: JavaScript Standard Style ESLint configuration.
-- `gh-pages`: GitHub Pages deployment utility.
-- `husky`: Git hooks made easy.
-- `lint-staged`: Run linters on pre-committed files.
-- `prettier`: Opinionated code formatter.
-- `sass`: CSS extension language.
-- `stylelint`: Linting utility for styles.
-- `stylelint-config-recommended`: Recommended stylelint configuration.
-- `stylelint-config-recommended-scss`: Recommended stylelint configuration for SCSS.
-- `stylelint-scss`: SCSS specific linting rules.
-- `typescript`: Typed superset of JavaScript.
 
 ## License
 
