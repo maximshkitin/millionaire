@@ -168,7 +168,6 @@ In the project directory, you can run the following scripts:
     └── index.ts
 ```
 
-
 ## License
 
 This project is licensed under the [MIT License](https://chat.openai.com/LICENSE).

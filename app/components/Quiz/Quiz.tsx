@@ -27,15 +27,15 @@ export function Quiz() {
   const [levels, setLevels] = useState<Level[]>([]);
 
   useEffect(() => {
-    const fetchDataAndSetLevels = async () => {
-      const mockData = await fetchMockData();
+    const fetchAndSetLevels = async () => {
+      const mockLevels = await fetchMockData();
 
-      if (mockData) {
-        setLevels(mockData);
+      if (mockLevels) {
+        setLevels(mockLevels);
       }
     };
 
-    fetchDataAndSetLevels();
+    fetchAndSetLevels();
   }, []);
 
   const { currentLevel, currentScore, isOngoing } = useSelector(
@@ -56,6 +56,16 @@ export function Quiz() {
     type: questionType,
     value: questionValue,
   } = currentQuestion;
+
+  const [shuffledAnswerOptions, setShuffledAnswerOptions] =
+    useState<AnswerOption[]>(options);
+
+  useEffect(() => {
+    setShuffledAnswerOptions(
+      options.slice() // to keep the original array unchanged
+        .sort(() => Math.random() - 0.5), // shuffle array!
+    );
+  }, [options, isOngoing]); // added isOngoing dependency to run setter on "Try Again" case
 
   const checkIfCorrect = (
     answer: AnswerOption[],
@@ -115,7 +125,7 @@ export function Quiz() {
         <QuizView
           className="QuizWrapper"
           type={questionType}
-          answerOptions={options}
+          answerOptions={shuffledAnswerOptions}
           correctAnswer={correctAnswer}
           currentLevelIndex={currentLevel - 1}
           scoreList={levels?.map((level) => level.score)}
