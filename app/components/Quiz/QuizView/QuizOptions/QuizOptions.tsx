@@ -69,7 +69,7 @@ export function QuizOptions({
 
       {options.map((option, index) => (
         <div
-          id={option.id}
+          key={option.id}
           role="button"
           tabIndex={index}
           className={`QuizOption ${
@@ -83,10 +83,12 @@ export function QuizOptions({
           }}
         >
           <QuizInfoBadge>
-            <span className="QuizOptionPrefix">
-              {generateAlphabet()[index]}
-            </span>
-            {option.value}
+            <div className="QuizOptionText">
+              <span className="QuizOptionPrefix">
+                {generateAlphabet()[index]}
+              </span>
+              {option.value}
+            </div>
           </QuizInfoBadge>
         </div>
       ))}

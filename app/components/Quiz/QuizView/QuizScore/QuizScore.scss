@@ -54,6 +54,8 @@
       background: $White;
       position: relative;
       z-index: map.get($zIndex, quizContent);
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 

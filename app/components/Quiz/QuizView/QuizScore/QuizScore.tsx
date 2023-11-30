@@ -3,8 +3,9 @@ import { useMediaQuery } from "react-responsive";
 
 import { QuizIconSidebar, QuizInfoBadge } from "../../../shared";
 
-import "./QuizScore.scss";
 import { QuizIconTypeValue } from "@/app/config/types";
+
+import "./QuizScore.scss";
 
 interface QuizScoreProps {
   scoreList?: number[];
