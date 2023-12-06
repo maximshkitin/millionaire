@@ -3,7 +3,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { AnswerOption, QuizState, UserAnswer } from "@/app/config/types";
 
 const initialState: QuizState = {
-  currentLevel: 1,
+  currentLevel: 0,
   currentScore: 0,
   currentAnswer: null,
   answerLogs: [],
@@ -18,7 +18,7 @@ export const quizSlice = createSlice({
       state.isOngoing = true;
     },
     resetQuiz(state) {
-      state.currentLevel = 1;
+      state.currentLevel = 0;
       state.currentScore = 0;
       state.answerLogs = [];
       state.isOngoing = true;

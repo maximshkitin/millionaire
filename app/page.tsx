@@ -50,9 +50,8 @@ export default function IndexPage() {
   const isFinalScreenClass =
     isOngoing !== null && !isOngoing ? "QuizFinalScreenWrapper" : "";
 
-  // '- 1' is needed because level count statrs from '1'
   const currentQuestion: Question =
-    levels?.[currentLevel - 1]?.question ?? initialQuestionState;
+    levels?.[currentLevel]?.question ?? initialQuestionState;
 
   const { options, correctAnswer, value: questionValue } = currentQuestion;
 
@@ -89,11 +88,9 @@ export default function IndexPage() {
     // emulating asyncrosity. this is a delay for showing answer results
     setTimeout(() => {
       if (checkIfCorrect(answer, correctAnswer)) {
-        const currentScoreValue = levels[currentLevel - 1].score;
+        const currentScoreValue = levels[currentLevel].score;
 
-        // avoiding '+ 1' because level count statrs from '1' while arrays do from '0'
-        if (levels[currentLevel]?.score) {
-          // next score value.
+        if (levels[currentLevel + 1]?.score) {
           dispatch(incrementLevel());
           dispatch(updateScore(currentScoreValue));
           dispatch(resetAnswerResult());
@@ -126,7 +123,7 @@ export default function IndexPage() {
           className="QuizWrapper"
           answerOptions={shuffledAnswerOptions}
           correctAnswer={correctAnswer}
-          currentLevelIndex={currentLevel - 1}
+          currentLevelIndex={currentLevel}
           scoreList={levels?.map((level) => level.score)}
           handleSubmitAnswer={handleSubmitAnswer}
         >

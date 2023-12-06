@@ -2,7 +2,6 @@ import { Level } from "./types";
 
 const levels: Level[] = [
   {
-    level: 1,
     score: 500,
     question: {
       id: "11111",
@@ -17,7 +16,6 @@ const levels: Level[] = [
     },
   },
   {
-    level: 2,
     score: 1000,
     question: {
       id: "66666",
@@ -32,7 +30,6 @@ const levels: Level[] = [
     },
   },
   {
-    level: 3,
     score: 2000,
     question: {
       id: "12345",
@@ -47,7 +44,6 @@ const levels: Level[] = [
     },
   },
   {
-    level: 4,
     score: 4000,
     question: {
       id: "23456",
@@ -62,7 +58,6 @@ const levels: Level[] = [
     },
   },
   {
-    level: 5,
     score: 8000,
     question: {
       id: "34567",
@@ -77,7 +72,6 @@ const levels: Level[] = [
     },
   },
   {
-    level: 6,
     score: 16000,
     question: {
       id: "45678",
@@ -92,7 +86,6 @@ const levels: Level[] = [
     },
   },
   {
-    level: 7,
     score: 32000,
     question: {
       id: "56789",
@@ -107,7 +100,6 @@ const levels: Level[] = [
     },
   },
   {
-    level: 8,
     score: 64000,
     question: {
       id: "67890",
@@ -122,7 +114,6 @@ const levels: Level[] = [
     },
   },
   {
-    level: 9,
     score: 125000,
     question: {
       id: "78901",
@@ -137,7 +128,6 @@ const levels: Level[] = [
     },
   },
   {
-    level: 10,
     score: 250000,
     question: {
       id: "89012",
@@ -152,7 +142,6 @@ const levels: Level[] = [
     },
   },
   {
-    level: 11,
     score: 500000,
     question: {
       id: "90123",
@@ -167,7 +156,6 @@ const levels: Level[] = [
     },
   },
   {
-    level: 12,
     score: 1000000,
     question: {
       id: "01234",

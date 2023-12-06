@@ -21,7 +21,6 @@ export interface UserAnswer {
 }
 
 export interface Level {
-  level: number;
   score: number;
   question: Question;
 }
