@@ -1,9 +1,9 @@
 "use client";
 
 import React from "react";
-import { useSelector } from "@/lib/redux";
+import { useSelector } from "@/app/store/redux";
 
-import { QuizIconLoading, QuizInfoBadge } from "../../../shared";
+import { QuizIconLoading, QuizInfoBadge } from "../../../components/shared";
 
 import { AnswerOption, RootState } from "@/app/config/types";
 import { generateAlphabet } from "@/app/helpers/generateAlphabet";

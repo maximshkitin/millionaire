@@ -1,8 +1,3 @@
-export const QuestionTypeValue = {
-  default: "singular",
-  multiselect: "multiselect",
-} as const;
-
 export const QuizIconTypeValue = {
   hamburger: "hamburger",
   close: "close",
@@ -13,12 +8,8 @@ export interface AnswerOption {
   value: string;
 }
 
-export type QuestionType =
-  (typeof QuestionTypeValue)[keyof typeof QuestionTypeValue];
-
 export interface Question {
   id: string;
-  type: QuestionType;
   value: string;
   options: AnswerOption[];
   correctAnswer: string[]; // IDs: figure out whether it's safe to keep it here

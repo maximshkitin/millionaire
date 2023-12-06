@@ -2,21 +2,15 @@
 
 import React, { useState } from "react";
 import { useMediaQuery } from "react-responsive";
-import {
-  AnswerOption,
-  QuestionType,
-  QuestionTypeValue,
-  QuizIconTypeValue,
-} from "@/app/config/types";
+import { AnswerOption, QuizIconTypeValue } from "@/app/config/types";
 import { QuizScore } from "./QuizScore/QuizScore";
 import { QuizOptions, QuizOptionsMultiselect } from "./QuizOptions";
-import { QuizIconSidebar } from "../../shared";
+import { QuizIconSidebar } from "../../components/shared";
 
-import "./QuizView.scss";
+import "./Quiz.scss";
 
 interface QuizViewProps {
   className: string;
-  type: QuestionType;
   answerOptions: AnswerOption[];
   scoreList: number[];
   correctAnswer: string[];
@@ -25,9 +19,8 @@ interface QuizViewProps {
   children: React.ReactNode;
 }
 
-export function QuizView({
+export function Quiz({
   className,
-  type,
   answerOptions,
   scoreList,
   correctAnswer,
@@ -41,11 +34,13 @@ export function QuizView({
 
   const toggleSidebar = () => setOpenSidebar(!openSidebar);
 
+  const isMultiselect = correctAnswer?.length > 1;
+
   return (
     <div className={className}>
       <div className="QuizContent">
         {children}
-        {type === QuestionTypeValue.multiselect ? (
+        {isMultiselect ? (
           <QuizOptionsMultiselect
             options={answerOptions}
             correctAnswer={correctAnswer}

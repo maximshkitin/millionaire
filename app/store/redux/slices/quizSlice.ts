@@ -38,8 +38,11 @@ export const quizSlice = createSlice({
     logAnswer(state, action: PayloadAction<UserAnswer>) {
       state.answerLogs = [...state.answerLogs, action.payload];
     },
-    showAnswerResult(state, action: PayloadAction<AnswerOption[] | null>) {
+    showAnswerResult(state, action: PayloadAction<AnswerOption[]>) {
       state.currentAnswer = action.payload;
+    },
+    resetAnswerResult(state) {
+      state.currentAnswer = null;
     },
   },
 });
@@ -52,4 +55,5 @@ export const {
   startQuiz,
   resetQuiz,
   showAnswerResult,
+  resetAnswerResult,
 } = quizSlice.actions;

@@ -110,10 +110,10 @@ In the project directory, you can run the following scripts:
 │   ├── Quiz.scss
 │   ├── Quiz.test.tsx
 │   ├── Quiz.tsx
-│   ├── QuizStaticView
-│   │   ├── QuizStaticView.scss
-│   │   ├── QuizStaticView.test.tsx
-│   │   ├── QuizStaticView.tsx
+│   ├── QuizLaunch
+│   │   ├── QuizLaunch.scss
+│   │   ├── QuizLaunch.test.tsx
+│   │   ├── QuizLaunch.tsx
 │   │   └── index.ts
 │   ├── QuizView
 │   │   ├── QuizOptions

@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { AnswerOption } from "@/app/config/types";
 import { QuizOptions } from "../QuizOptions";
-import { QuizButton } from "../../../../shared";
+import { QuizButton } from "../../../../components/shared";
 
 import { buttonText } from "@/app/config/consts";
 

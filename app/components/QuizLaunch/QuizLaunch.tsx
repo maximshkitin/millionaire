@@ -1,26 +1,26 @@
 import React, { ReactNode, MouseEvent } from "react";
-import { QuizButton, QuizIcon } from "../../shared";
+import { QuizButton, QuizIcon } from "../shared";
 
-import "./QuizStaticView.scss";
+import "./QuizLaunch.scss";
 
-interface QuizStaticViewProps {
+export interface QuizLaunchProps {
   className: string;
   buttonText: string;
   handleClick: (event: MouseEvent<HTMLButtonElement>) => void;
   children: ReactNode;
 }
 
-export function QuizStaticView({
+export function QuizLaunch({
   className,
   handleClick,
   buttonText,
   children,
-}: QuizStaticViewProps) {
+}: QuizLaunchProps) {
   return (
-    <div className={`QuizStaticView ${className}`}>
+    <div className={`QuizLaunch ${className}`}>
       <QuizIcon />
 
-      <div className="QuizStaticViewAction">
+      <div className="QuizLaunchAction">
         {children}
         <QuizButton className="QuizButton" handleClick={handleClick}>
           {buttonText}
@@ -30,4 +30,4 @@ export function QuizStaticView({
   );
 }
 
-export default QuizStaticView;
+export default QuizLaunch;

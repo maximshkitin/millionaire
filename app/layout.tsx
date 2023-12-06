@@ -1,6 +1,6 @@
 /* Components */
 import React from "react";
-import { Providers } from "@/lib/providers";
+import { Providers } from "@/app/store/providers";
 
 /* Instruments */
 import "./styles/layout.scss";
@@ -19,3 +19,7 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
     </Providers>
   );
 }
+
+export const metadata = {
+  title: "Millionaire App",
+};

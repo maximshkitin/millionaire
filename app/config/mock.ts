@@ -6,7 +6,6 @@ const levels: Level[] = [
     score: 500,
     question: {
       id: "11111",
-      type: "singular",
       value: "What is the capital of France?",
       options: [
         { id: "11111_1", value: "Berlin" },
@@ -22,7 +21,6 @@ const levels: Level[] = [
     score: 1000,
     question: {
       id: "66666",
-      type: "singular",
       value: "Which element has the chemical symbol 'O'?",
       options: [
         { id: "66666_1", value: "Oxygen" },
@@ -38,7 +36,6 @@ const levels: Level[] = [
     score: 2000,
     question: {
       id: "12345",
-      type: "multiselect",
       value: "Which of the following are prime numbers?",
       options: [
         { id: "12345_1", value: "2" },
@@ -54,7 +51,6 @@ const levels: Level[] = [
     score: 4000,
     question: {
       id: "23456",
-      type: "singular",
       value: "What is the largest ocean on Earth?",
       options: [
         { id: "23456_1", value: "Atlantic" },
@@ -70,7 +66,6 @@ const levels: Level[] = [
     score: 8000,
     question: {
       id: "34567",
-      type: "singular",
       value: "Which gas do plants absorb during photosynthesis?",
       options: [
         { id: "34567_1", value: "Carbon Dioxide" },
@@ -86,7 +81,6 @@ const levels: Level[] = [
     score: 16000,
     question: {
       id: "45678",
-      type: "multiselect",
       value: "Which of the following are mammals?",
       options: [
         { id: "45678_1", value: "Lion" },
@@ -102,7 +96,6 @@ const levels: Level[] = [
     score: 32000,
     question: {
       id: "56789",
-      type: "singular",
       value: "What is the largest planet in our solar system?",
       options: [
         { id: "56789_1", value: "Mars" },
@@ -118,7 +111,6 @@ const levels: Level[] = [
     score: 64000,
     question: {
       id: "67890",
-      type: "singular",
       value: "Who wrote 'Romeo and Juliet'?",
       options: [
         { id: "67890_1", value: "Charles Dickens" },
@@ -134,7 +126,6 @@ const levels: Level[] = [
     score: 125000,
     question: {
       id: "78901",
-      type: "multiselect",
       value: "Which of the following are programming languages?",
       options: [
         { id: "78901_1", value: "Java" },
@@ -150,7 +141,6 @@ const levels: Level[] = [
     score: 250000,
     question: {
       id: "89012",
-      type: "singular",
       value: "What is the capital of Japan?",
       options: [
         { id: "89012_1", value: "Beijing" },
@@ -166,7 +156,6 @@ const levels: Level[] = [
     score: 500000,
     question: {
       id: "90123",
-      type: "singular",
       value: "Who painted the Mona Lisa?",
       options: [
         { id: "90123_1", value: "Vincent van Gogh" },
@@ -182,7 +171,6 @@ const levels: Level[] = [
     score: 1000000,
     question: {
       id: "01234",
-      type: "multiselect",
       value: "Which of the following are natural disasters?",
       options: [
         { id: "01234_1", value: "Earthquake" },

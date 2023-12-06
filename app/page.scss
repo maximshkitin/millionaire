@@ -2,7 +2,7 @@
 
 @import "@/app/styles/variables";
 
-@import "../shared/QuizTextBox/QuizTextBox";
+@import "./components/shared/QuizTextBox/QuizTextBox";
 
 .Quiz {
   width: 100vw;
@@ -12,7 +12,7 @@
     height: auto;
   }
 
-  // Start Screen Triangle background
+  // Intro Screen Triangle background
   &.QuizStartScreenWrapper {
     &:after {
       content: "";

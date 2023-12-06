@@ -1,7 +1,7 @@
-@import "../../shared/QuizButton/QuizButton";
-@import "../../shared/QuizIconSidebar/QuizIconSidebar";
+@import "../shared/QuizButton/QuizButton";
+@import "../shared/QuizIconSidebar/QuizIconSidebar";
 
-.QuizStaticView {
+.QuizLaunch {
   padding: 80px;
   margin: 0 auto;
   display: flex;
@@ -14,7 +14,7 @@
     width: 50%;
   }
 
-  .QuizStaticViewAction {
+  .QuizLaunchAction {
     padding: 0 30px;
     .QuizButtonWrapper {
       margin-top: 65px;
@@ -45,7 +45,7 @@
       font-size: 40px;
     }
 
-    .QuizStaticViewAction {
+    .QuizLaunchAction {
       padding: 0 20px;
       .QuizButtonWrapper {
         margin-top: 40px;
@@ -70,7 +70,7 @@
       height: 50%;
       justify-content: center;
     }
-    .QuizStaticViewAction {
+    .QuizLaunchAction {
       padding: 0;
       display: flex;
       flex-direction: column;
@@ -90,14 +90,14 @@
   }
 
   @media screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
-    .QuizStaticViewAction .QuizButtonWrapper {
+    .QuizLaunchAction .QuizButtonWrapper {
       width: 400px;
       margin: 0 auto;
     }
   }
 
   @media screen and (max-width: $breakpoint-md) and (orientation: landscape) {
-    .QuizStaticViewAction .QuizButtonWrapper {
+    .QuizLaunchAction .QuizButtonWrapper {
       width: 400px;
       margin: 0 auto;
     }
