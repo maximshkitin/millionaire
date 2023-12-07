@@ -4,8 +4,8 @@ import React, { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import { AnswerOption, QuizIconTypeValue } from "@/app/config/types";
 import { QuizScore } from "./QuizScore/QuizScore";
+import { QuizIconSidebar } from "@/app/components/shared";
 import { QuizOptions, QuizOptionsMultiselect } from "./QuizOptions";
-import { QuizIconSidebar } from "../../components/shared";
 
 import "./Quiz.scss";
 

@@ -3,7 +3,7 @@ import { QuizButton, QuizIcon } from "../shared";
 
 import "./QuizLaunch.scss";
 
-export interface QuizLaunchProps {
+interface QuizLaunchProps {
   className: string;
   buttonText: string;
   handleClick: (event: MouseEvent<HTMLButtonElement>) => void;

@@ -1,11 +1,21 @@
-import React from "react";
+import React, { MouseEvent } from "react";
 
-import { QuizLaunch, QuizLaunchProps } from "@/app/components";
+import { QuizLaunch, QuizTextBox } from "@/app/components";
+import { buttonText, staticScreenTitle } from "../config/consts";
 
-export function QuizIntro({ children, ...restProps }: QuizLaunchProps) {
+interface QuizIntroProps {
+  handleClick: (event: MouseEvent<HTMLButtonElement>) => void;
+}
+
+export function QuizIntro({ handleClick }: QuizIntroProps) {
   return (
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    <QuizLaunch {...restProps}>{children}</QuizLaunch>
+    <QuizLaunch
+      className="QuizStartScreen"
+      buttonText={buttonText.start}
+      handleClick={handleClick}
+    >
+      <QuizTextBox className="QuizTitle">{staticScreenTitle.main}</QuizTextBox>
+    </QuizLaunch>
   );
 }
 

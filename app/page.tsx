@@ -15,11 +15,7 @@ import {
 } from "@/app/store/redux/index";
 import { RootState, AnswerOption, Question, Level } from "@/app/config/types";
 import { checkAnswer, fetchMockData } from "@/app/helpers";
-import {
-  buttonText,
-  initialQuestionState,
-  staticScreenTitle,
-} from "@/app/config/consts";
+import { initialQuestionState } from "@/app/config/consts";
 import { QuizIntro, Quiz, QuizResult } from "./pages";
 import { QuizTextBox } from "./components/shared";
 
@@ -106,17 +102,7 @@ export default function IndexPage() {
 
   return (
     <div className={`Quiz ${isStartScreenClass} ${isFinalScreenClass}`}>
-      {isOngoing === null && (
-        <QuizIntro
-          className="QuizStartScreen"
-          buttonText={buttonText.start}
-          handleClick={handleStart}
-        >
-          <QuizTextBox className="QuizTitle">
-            {staticScreenTitle.main}
-          </QuizTextBox>
-        </QuizIntro>
-      )}
+      {isOngoing === null && <QuizIntro handleClick={handleStart} />}
 
       {isOngoing && (
         <Quiz
@@ -132,20 +118,7 @@ export default function IndexPage() {
       )}
 
       {isOngoing === false && (
-        <QuizResult
-          className="QuizFinalScreen"
-          buttonText={buttonText.again}
-          handleClick={handleReset}
-        >
-          <div>
-            <QuizTextBox className="QuizSubtitle">
-              {staticScreenTitle.totalScore}
-            </QuizTextBox>
-            <QuizTextBox className="QuizTitle">
-              ${currentScore?.toLocaleString()} {staticScreenTitle.earned}
-            </QuizTextBox>
-          </div>
-        </QuizResult>
+        <QuizResult handleClick={handleReset} currentScore={currentScore} />
       )}
     </div>
   );
