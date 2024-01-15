@@ -97,7 +97,7 @@ export default function IndexPage() {
       } else {
         dispatch(gameOver());
       }
-    }, 1000);
+    }, 1500);
   };
 
   return (

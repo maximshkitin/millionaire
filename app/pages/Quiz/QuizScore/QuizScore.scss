@@ -91,11 +91,21 @@
     }
 
     @media screen and (max-width: $breakpoint-lg) {
+      display: block;
+      margin: 4px auto;
+      width: 250px;
+
       &::before {
+        left: 0;
+        width: auto;
+        right: calc(50% + 125px);
         transform: translateY(7.5px);
       }
 
       &::after {
+        right: 0;
+        width: auto;
+        left: calc(50% + 125px);
         transform: translateY(-8.5px);
       }
     }
