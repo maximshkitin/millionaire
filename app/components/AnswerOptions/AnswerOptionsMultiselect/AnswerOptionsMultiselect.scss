@@ -1,0 +1,23 @@
+@import "@/app/styles/variables";
+
+.QuizContent {
+  .ButtonWrapper {
+    margin-top: 30px;
+    padding: 0 15px;
+  }
+}
+
+.AnswerOptionsMultiselect {
+  @media screen and (max-width: $breakpoint-md) {
+    flex: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 100px;
+
+    .AnswerOptions {
+      flex: unset;
+      padding-bottom: 0;
+    }
+  }
+}

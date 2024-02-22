@@ -1,0 +1,24 @@
+@use "sass:map";
+
+@import "@/app/styles/variables";
+
+.QuizContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 120px 80px;
+  position: relative;
+  z-index: map.get($zIndex, quizContent);
+  width: 75%;
+
+  @media screen and (max-width: $breakpoint-lg) {
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 50px;
+    text-align: center;
+  }
+
+  @media screen and (max-width: $breakpoint-md) {
+    padding: 25px 0;
+  }
+}
