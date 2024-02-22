@@ -2,7 +2,7 @@
 
 @import "@/app/styles/variables";
 
-@import "@/app/components/shared/QuizTextBox/QuizTextBox";
+@import "@/app/components/shared/TextBox/TextBox";
 
 .Quiz {
   width: 100vw;
@@ -13,7 +13,7 @@
   }
 
   // Intro Screen Triangle background
-  &.QuizStartScreenWrapper {
+  &.IntroScreenWrapper {
     &:after {
       content: "";
       position: absolute;
@@ -32,7 +32,7 @@
       }
     }
   }
-  &.QuizFinalScreenWrapper {
+  &.ResultScreenWrapper {
     background-color: $Black-5;
   }
 }

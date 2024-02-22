@@ -1,2 +1,2 @@
-export * from "./QuizLaunch";
+export * from "./LaunchScreen";
 export * from "./shared";

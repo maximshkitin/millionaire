@@ -1,4 +1,4 @@
-export const QuizIconTypeValue = {
+export const IconTypeValue = {
   hamburger: "hamburger",
   close: "close",
 } as const;

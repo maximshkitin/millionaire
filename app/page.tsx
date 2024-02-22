@@ -16,8 +16,8 @@ import {
 import { RootState, AnswerOption, Question, Level } from "@/app/config/types";
 import { checkAnswer, fetchMockData } from "@/app/helpers";
 import { initialQuestionState } from "@/app/config/consts";
-import { QuizIntro, Quiz, QuizResult } from "./pages";
-import { QuizTextBox } from "./components/shared";
+import { Intro, Quiz, Result } from "./pages";
+import { TextBox } from "./components/shared";
 
 import "./page.scss";
 
@@ -42,9 +42,9 @@ export default function IndexPage() {
     (state: RootState) => state.quiz,
   );
 
-  const isStartScreenClass = isOngoing === null ? "QuizStartScreenWrapper" : "";
+  const isStartScreenClass = isOngoing === null ? "IntroScreenWrapper" : "";
   const isFinalScreenClass =
-    isOngoing !== null && !isOngoing ? "QuizFinalScreenWrapper" : "";
+    isOngoing !== null && !isOngoing ? "ResultScreenWrapper" : "";
 
   const currentQuestion: Question =
     levels?.[currentLevel]?.question ?? initialQuestionState;
@@ -102,7 +102,7 @@ export default function IndexPage() {
 
   return (
     <div className={`Quiz ${isStartScreenClass} ${isFinalScreenClass}`}>
-      {isOngoing === null && <QuizIntro handleClick={handleStart} />}
+      {isOngoing === null && <Intro handleClick={handleStart} />}
 
       {isOngoing && (
         <Quiz
@@ -113,12 +113,12 @@ export default function IndexPage() {
           scoreList={levels?.map((level) => level.score)}
           handleSubmitAnswer={handleSubmitAnswer}
         >
-          <QuizTextBox className="QuizQuestion">{questionValue}</QuizTextBox>
+          <TextBox className="Question">{questionValue}</TextBox>
         </Quiz>
       )}
 
       {isOngoing === false && (
-        <QuizResult handleClick={handleReset} currentScore={currentScore} />
+        <Result handleClick={handleReset} currentScore={currentScore} />
       )}
     </div>
   );
