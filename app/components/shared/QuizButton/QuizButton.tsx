@@ -7,6 +7,7 @@ interface QuizButtonProps {
   className?: string;
   children: ReactNode;
   disabled?: boolean;
+  tabIndex?: number;
 }
 
 export function QuizButton({
@@ -14,10 +15,13 @@ export function QuizButton({
   className = "",
   children,
   disabled = false,
+  ...restProps
 }: QuizButtonProps) {
   return (
     <div className="QuizButtonWrapper">
       <button
+        // eslint-disable-next-line react/jsx-props-no-spreading
+        {...restProps}
         type="button"
         className={`QuizButton ${className}`}
         onClick={handleClick}

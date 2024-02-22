@@ -46,13 +46,14 @@ export function QuizOptionsMultiselect({
     <div className="QuizOptionsMultiselect">
       <QuizOptions
         options={options}
-        currentSelection={selectedOptions}
+        multipleSelection={selectedOptions}
         correctAnswer={correctAnswer}
         handleClick={toggleSelection}
       />
       <QuizButton
         handleClick={handleSubmitAndResetSelected}
         disabled={!selectedOptions.length}
+        tabIndex={options.length}
       >
         {buttonText.answer}
       </QuizButton>
